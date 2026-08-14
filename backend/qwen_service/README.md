@@ -7,9 +7,15 @@ service loads `models/sentilight_qwen3_0_6b_sft_q4km.gguf` by default
 (`SENTILIGHT_QWEN_MODEL` overrides it). Weights are distributed separately from this
 repository; the training code that produces them is under `training/`.
 
-> `prepare_model.py` still targets an older `sentilight_kote_q4km.gguf` derived from
-> Qwen2.5, which this service does **not** load. Use `SENTILIGHT_QWEN_MODEL` or place the
-> Qwen3 GGUF at the default path instead.
+Install a trained GGUF at that path with:
+
+```bash
+python backend/qwen_service/prepare_model.py path/to/sentilight_qwen3_0_6b_sft_q4km.gguf
+```
+
+`prepare_model.py` resolves its destination from the same default and the same
+`SENTILIGHT_QWEN_MODEL` override the service uses, so the two cannot drift apart. Earlier
+revisions hard-coded a Qwen2.5-derived filename that the service never loaded.
 
 Install and run:
 
