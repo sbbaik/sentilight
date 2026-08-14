@@ -190,3 +190,8 @@ every script resolves locations relative to the repository root.
 ## License
 
 Apache License 2.0 — see [LICENSE](LICENSE).
+
+Text derived from the KOTE dataset is included under the MIT license; the notice is
+reproduced in [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md), which also records what
+this repository can and cannot establish about the provenance of the labels that came with
+that source data.
