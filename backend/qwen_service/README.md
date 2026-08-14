@@ -1,14 +1,15 @@
-# Qwen GGUF service
+# Qwen comparator service
 
-This standalone FastAPI process serves the fourth lighting model on port `8103`.
+A standalone FastAPI process that serves the Qwen3-0.6B comparator on port `8103`.
 
-Prepare the existing trained GGUF model:
+The model is Qwen3-0.6B, LoRA-supervised-fine-tuned and quantized to GGUF Q4_K_M. The
+service loads `models/sentilight_qwen3_0_6b_sft_q4km.gguf` by default
+(`SENTILIGHT_QWEN_MODEL` overrides it). Weights are distributed separately from this
+repository; the training code that produces them is under `training/`.
 
-```bash
-cd New
-python backend/qwen_service/prepare_model.py \
-  ../App/sentilight_v4_local_Qwen2.5/model_qwen_kote/output/sentilight_kote_q4km.gguf
-```
+> `prepare_model.py` still targets an older `sentilight_kote_q4km.gguf` derived from
+> Qwen2.5, which this service does **not** load. Use `SENTILIGHT_QWEN_MODEL` or place the
+> Qwen3 GGUF at the default path instead.
 
 Install and run:
 
@@ -27,4 +28,7 @@ curl -X POST http://127.0.0.1:8103/predict \
   -d '{"text":"오늘은 마음이 편안해"}'
 ```
 
-The main backend service uses this endpoint through its `remote` adapter.
+The request text is Korean because the models are trained on Korean input; the example
+above means "I feel at ease today."
+
+The main backend service reaches this endpoint through its `remote` adapter.
