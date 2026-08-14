@@ -9,7 +9,17 @@ type: software
 authors:
   - family-names: Baik
     given-names: Seongbok
+doi: 10.5281/zenodo.21930495
+version: v1.0.0
+date-released: '2026-08-14'
 repository-code: 'https://github.com/sbbaik/SentiLight'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21930495
+    description: Concept DOI - resolves to the latest version
+  - type: doi
+    value: 10.5281/zenodo.21930496
+    description: Version DOI - the v1.0.0 archived release
 abstract: >-
   Code, evaluation data, per-row predictions and preregistrations
   for a study of output formulation versus model scale in

@@ -1,5 +1,7 @@
 # SentiLight — Policy-Space Reformulation for Affective Smart-Lighting Control
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21930495.svg)](https://doi.org/10.5281/zenodo.21930495)
+
 Research artifacts for a study of output-formulation versus model scale in a smart-lighting
 control task governed by a finite policy.
 
@@ -143,6 +145,19 @@ that evidence.
 > The protocols reference internal working documents that are not part of this release, so
 > those links do not resolve here. The files are left exactly as written: editing them to
 > tidy the links would change their digests and break the tie to the commits.
+
+## Citing
+
+Zenodo mints two kinds of DOI for a GitHub-archived release, and they are not
+interchangeable:
+
+| DOI | Resolves to | Use it for |
+|---|---|---|
+| **`10.5281/zenodo.21930495`** | always the latest version | the badge above, and general citation |
+| `10.5281/zenodo.21930496` | this archived release, `v1.0.0` | pinning the exact snapshot a paper used |
+
+Cite the concept DOI to follow the work forward, or the version DOI to pin what you ran
+against. `CITATION.cff` carries both.
 
 ## Model weights
 
