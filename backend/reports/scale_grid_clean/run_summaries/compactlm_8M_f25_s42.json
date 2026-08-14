@@ -1,0 +1,90 @@
+{
+  "dataset": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v5/backend/reports/benchmark_datasets/v3_test_mixed_2000.jsonl",
+  "segment": "rule",
+  "rows": 1000,
+  "checkpoint": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v5/backend/models/compact_llm/scale_grid_runs_clean/8M/seed_42/f25/sft/compactlm_from_scratch_best.pt",
+  "model_dir": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v5/backend/models/compact_llm",
+  "model_id": "compactlm_8M_f25_s42",
+  "display_name": "CompactLM 8M 25% seed 42",
+  "device": "cuda:0",
+  "parameter_count": 8150208,
+  "model_config": {
+    "model_name": "Sentilight-CompactLM-v0.1",
+    "vocab_size": 24000,
+    "block_size": 256,
+    "n_layer": 8,
+    "n_head": 3,
+    "d_model": 192,
+    "d_ff": 512,
+    "dropout": 0.1,
+    "rope_base": 10000.0,
+    "init_std": 0.02
+  },
+  "per_row_jsonl": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v5/backend/reports/scale_grid_clean/per_row/compactlm_8M_f25_s42.jsonl",
+  "coarse_dimensions": [
+    "H",
+    "S",
+    "B",
+    "CT",
+    "Dimmer"
+  ],
+  "metrics": {
+    "model_id": "compactlm_8M_f25_s42",
+    "display_name": "CompactLM 8M 25% seed 42",
+    "adapter": "custom_pytorch",
+    "mode": "direct_checkpoint",
+    "successes": 997,
+    "errors": 3,
+    "success_rate": 0.997,
+    "semantic_passes": 227,
+    "semantic_pass_rate": 0.227,
+    "strict_semantic_passes": 227,
+    "strict_semantic_pass_rate": 0.227,
+    "coarse_3bin_passes": 364,
+    "coarse_3bin_pass_rate": 0.364,
+    "coarse_pass_delta": 137,
+    "latency": {
+      "mean_ms": 197.15,
+      "p50_ms": 198.1,
+      "p95_ms": 200.09,
+      "max_ms": 372.99
+    },
+    "mae": {
+      "H": 31.08,
+      "S": 14.37,
+      "B": 12.9,
+      "Dimmer": 13.54,
+      "CT": 36.9
+    },
+    "coarse_match_rates": {
+      "H": 0.8215,
+      "S": 0.683,
+      "B": 0.6389,
+      "CT": 0.7232,
+      "Dimmer": 0.7723
+    },
+    "all_5_coarse_match_rate": 0.3651,
+    "coarse_failure_breakdown": {
+      "H": 178,
+      "S": 316,
+      "B": 360,
+      "CT": 276,
+      "Dimmer": 227
+    },
+    "top_coarse_failure_dimension": "B",
+    "error_samples": [
+      {
+        "input": "감정은 편안해인데, hue는 연초록빛 쪽을 우선해줘",
+        "error": "CompactLM did not generate a valid control JSON: {\"H\": 120, \"S\": 280, \"B\": 70, \"Dimmer\": 60, \"CT\": 320}}\": 320}, \"CT\": 320}}\": 320}, \"CT\": 320}\": 320}, \"CT\": 320}}\": 320}, \"CT\": 320}}\": 320"
+      },
+      {
+        "input": "감정은 슬퍼인데, hue는 파르스름한 파란빛 쪽을 우선해줘",
+        "error": "CompactLM did not generate a valid control JSON: {\"H\": 220, \"S\": 32, \"B\": 30, \"Dimmer\": 490}\": 500}}\": 420}, \"CT\": 420}}\": 0, \"CT\": 420}}\": 0, \"CT\": 420}}}\": 58}, \"CT\": 320}}\": 0, \"CT\": 4"
+      },
+      {
+        "input": "내 기분은 긴장돼 쪽이고, 전등은 어두운 노랑 분위기로 맞춰줘",
+        "error": "CompactLM did not generate a valid control JSON: {\"H\": 450, \"S\": 58, \"B\": 44, \"Dimmer\": 40, \"CT\": 323}}\": 333}, \"CT\": 320}}\": 0, \"CT\": 420}}\": 0, \"CT\": 420}}}\": 58}, \"CT\": 320}}\": 0, \"CT\":"
+      }
+    ]
+  }
+}

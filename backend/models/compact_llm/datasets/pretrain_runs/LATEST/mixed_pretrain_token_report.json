@@ -1,0 +1,8 @@
+{
+  "lines_read": 251304,
+  "lines_encoded": 251304,
+  "total_tokens": 5353779,
+  "tokenizer_path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/tokenizer/tokenizer.json",
+  "output_npy": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/pretrain_tokens.npy",
+  "sha256": "619aae4c9407c6deccd25eeddc873dc09526942da643c8913cf3cae5626fb0f0"
+}

@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+title: >-
+  SentiLight — Policy-Space Reformulation for Affective
+  Smart-Lighting Control (research artifacts)
+message: >-
+  If you use these artifacts, please cite this record and the
+  associated paper.
+type: software
+authors:
+  - family-names: Baik
+    given-names: Seongbok
+repository-code: 'https://github.com/sbbaik/SentiLight'
+abstract: >-
+  Code, evaluation data, per-row predictions and preregistrations
+  for a study of output formulation versus model scale in
+  affective smart-lighting control. The control task is governed
+  by a finite policy of 240 reachable (H, S, B, Dimmer, CT)
+  actions; reformulating generation as classification over that
+  action space lets a 23M model exceed a 60M generative model on
+  policy compliance. A 2x2 decomposition attributes most of the
+  gain to aligning training data with the policy rather than to
+  the output head, and a constrained-decoding control shows that
+  projecting generative outputs onto the valid action set after
+  the fact recovers none of the gap.
+keywords:
+  - structured output
+  - constrained decoding
+  - compact language models
+  - on-device inference
+  - affective computing
+  - smart lighting
+  - preregistration
+  - reproducibility
+license: Apache-2.0

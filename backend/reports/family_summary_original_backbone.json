@@ -1,0 +1,745 @@
+{
+  "families": [
+    {
+      "name": "23M generative LM",
+      "family": "generative",
+      "runs": 3,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "parameter_count": 23378304,
+      "strict": {
+        "mean": 0.38199999999999995,
+        "sd": 0.055027265968790415
+      },
+      "coarse": {
+        "mean": 0.6203333333333333,
+        "sd": 0.0798268960522287
+      },
+      "latency_mean_ms": {
+        "mean": 203.38333333333333,
+        "sd": 3.0575207821588513
+      },
+      "rows": [
+        {
+          "seed": 42,
+          "model_id": "compactlm_23M_f100_s42",
+          "checkpoint": "backend/models/compact_llm/scale_grid_runs/23M/seed_42/f100/sft/compactlm_from_scratch_best.pt",
+          "per_row_jsonl": "backend/reports/scale_grid/per_row/compactlm_23M_f100_s42.jsonl",
+          "parameter_count": 23378304,
+          "rows": 1000,
+          "strict": 0.438,
+          "coarse": 0.704,
+          "latency_mean_ms": 205.34,
+          "success_rate": 0.996
+        },
+        {
+          "seed": 43,
+          "model_id": "compactlm_23M_f100_s43",
+          "checkpoint": "backend/models/compact_llm/scale_grid_runs/23M/seed_43/f100/sft/compactlm_from_scratch_best.pt",
+          "per_row_jsonl": "backend/reports/scale_grid/per_row/compactlm_23M_f100_s43.jsonl",
+          "parameter_count": 23378304,
+          "rows": 1000,
+          "strict": 0.328,
+          "coarse": 0.545,
+          "latency_mean_ms": 199.86,
+          "success_rate": 1.0
+        },
+        {
+          "seed": 44,
+          "model_id": "compactlm_23M_f100_s44",
+          "checkpoint": "backend/models/compact_llm/scale_grid_runs/23M/seed_44/f100/sft/compactlm_from_scratch_best.pt",
+          "per_row_jsonl": "backend/reports/scale_grid/per_row/compactlm_23M_f100_s44.jsonl",
+          "parameter_count": 23378304,
+          "rows": 1000,
+          "strict": 0.38,
+          "coarse": 0.612,
+          "latency_mean_ms": 204.95,
+          "success_rate": 1.0
+        }
+      ]
+    },
+    {
+      "name": "60M generative LM",
+      "family": "generative",
+      "runs": 3,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "parameter_count": 62112256,
+      "strict": {
+        "mean": 0.434,
+        "sd": 0.04253234063627348
+      },
+      "coarse": {
+        "mean": 0.7056666666666667,
+        "sd": 0.05603867711976552
+      },
+      "latency_mean_ms": {
+        "mean": 390.58,
+        "sd": 3.2759273496217602
+      },
+      "rows": [
+        {
+          "seed": 42,
+          "model_id": "compactlm_60M_f100_s42",
+          "checkpoint": "backend/models/compact_llm/scale_grid_runs/60M/seed_42/f100/sft/compactlm_from_scratch_best.pt",
+          "per_row_jsonl": "backend/reports/scale_grid/per_row/compactlm_60M_f100_s42.jsonl",
+          "parameter_count": 62112256,
+          "rows": 1000,
+          "strict": 0.467,
+          "coarse": 0.74,
+          "latency_mean_ms": 393.9,
+          "success_rate": 1.0
+        },
+        {
+          "seed": 43,
+          "model_id": "compactlm_60M_f100_s43",
+          "checkpoint": "backend/models/compact_llm/scale_grid_runs/60M/seed_43/f100/sft/compactlm_from_scratch_best.pt",
+          "per_row_jsonl": "backend/reports/scale_grid/per_row/compactlm_60M_f100_s43.jsonl",
+          "parameter_count": 62112256,
+          "rows": 1000,
+          "strict": 0.386,
+          "coarse": 0.641,
+          "latency_mean_ms": 390.49,
+          "success_rate": 1.0
+        },
+        {
+          "seed": 44,
+          "model_id": "compactlm_60M_f100_s44",
+          "checkpoint": "backend/models/compact_llm/scale_grid_runs/60M/seed_44/f100/sft/compactlm_from_scratch_best.pt",
+          "per_row_jsonl": "backend/reports/scale_grid/per_row/compactlm_60M_f100_s44.jsonl",
+          "parameter_count": 62112256,
+          "rows": 1000,
+          "strict": 0.449,
+          "coarse": 0.736,
+          "latency_mean_ms": 387.35,
+          "success_rate": 1.0
+        }
+      ]
+    },
+    {
+      "name": "23M policy-only LM",
+      "family": "generative_policy_only",
+      "runs": 3,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "parameter_count": 23378304,
+      "strict": {
+        "mean": 0.5103333333333334,
+        "sd": 0.012662279942148398
+      },
+      "coarse": {
+        "mean": 0.7976666666666666,
+        "sd": 0.03655589327773748
+      },
+      "latency_mean_ms": {
+        "mean": 206.91666666666666,
+        "sd": 5.201752909677025
+      },
+      "rows": [
+        {
+          "seed": 42,
+          "model_id": "a2_policy_lm_23M_s42",
+          "checkpoint": "backend/models/compact_llm/a2_policy_only_runs/23M/seed_42/compactlm_from_scratch_best.pt",
+          "per_row_jsonl": "backend/reports/a2_policy_only/per_row/a2_policy_lm_23M_s42.jsonl",
+          "parameter_count": 23378304,
+          "rows": 1000,
+          "strict": 0.524,
+          "coarse": 0.83,
+          "latency_mean_ms": 205.5,
+          "success_rate": 1.0
+        },
+        {
+          "seed": 43,
+          "model_id": "a2_policy_lm_23M_s43",
+          "checkpoint": "backend/models/compact_llm/a2_policy_only_runs/23M/seed_43/compactlm_from_scratch_best.pt",
+          "per_row_jsonl": "backend/reports/a2_policy_only/per_row/a2_policy_lm_23M_s43.jsonl",
+          "parameter_count": 23378304,
+          "rows": 1000,
+          "strict": 0.499,
+          "coarse": 0.805,
+          "latency_mean_ms": 212.68,
+          "success_rate": 1.0
+        },
+        {
+          "seed": 44,
+          "model_id": "a2_policy_lm_23M_s44",
+          "checkpoint": "backend/models/compact_llm/a2_policy_only_runs/23M/seed_44/compactlm_from_scratch_best.pt",
+          "per_row_jsonl": "backend/reports/a2_policy_only/per_row/a2_policy_lm_23M_s44.jsonl",
+          "parameter_count": 23378304,
+          "rows": 1000,
+          "strict": 0.508,
+          "coarse": 0.758,
+          "latency_mean_ms": 202.57,
+          "success_rate": 1.0
+        }
+      ]
+    },
+    {
+      "name": "23M tuple head",
+      "family": "tuple_head",
+      "runs": 3,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "parameter_count": 23470464,
+      "strict": {
+        "mean": 0.535,
+        "sd": 0.005291502622129186
+      },
+      "coarse": {
+        "mean": 0.8586666666666667,
+        "sd": 0.0109696551146029
+      },
+      "latency_mean_ms": {
+        "mean": 0.26,
+        "sd": 0.010000000000000009
+      },
+      "rows": [
+        {
+          "seed": 42,
+          "model_id": "tuple_head_23M_f100_s42",
+          "checkpoint": "backend/models/compact_llm/tuple_head_runs/23M/seed_42/compactlm_tuple_classifier_best.pt",
+          "per_row_jsonl": "backend/reports/tuple_head/per_row/tuple_head_23M_f100_s42.jsonl",
+          "parameter_count": 23470464,
+          "rows": 1000,
+          "strict": 0.539,
+          "coarse": 0.871,
+          "latency_mean_ms": 0.26,
+          "success_rate": 1.0
+        },
+        {
+          "seed": 43,
+          "model_id": "tuple_head_23M_f100_s43",
+          "checkpoint": "backend/models/compact_llm/tuple_head_runs/23M/seed_43/compactlm_tuple_classifier_best.pt",
+          "per_row_jsonl": "backend/reports/tuple_head/per_row/tuple_head_23M_f100_s43.jsonl",
+          "parameter_count": 23470464,
+          "rows": 1000,
+          "strict": 0.537,
+          "coarse": 0.855,
+          "latency_mean_ms": 0.25,
+          "success_rate": 1.0
+        },
+        {
+          "seed": 44,
+          "model_id": "tuple_head_23M_f100_s44",
+          "checkpoint": "backend/models/compact_llm/tuple_head_runs/23M/seed_44/compactlm_tuple_classifier_best.pt",
+          "per_row_jsonl": "backend/reports/tuple_head/per_row/tuple_head_23M_f100_s44.jsonl",
+          "parameter_count": 23470464,
+          "rows": 1000,
+          "strict": 0.529,
+          "coarse": 0.85,
+          "latency_mean_ms": 0.27,
+          "success_rate": 1.0
+        }
+      ]
+    },
+    {
+      "name": "60M tuple head",
+      "family": "tuple_head",
+      "runs": 3,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "parameter_count": 62235136,
+      "strict": {
+        "mean": 0.5286666666666667,
+        "sd": 0.014640127503998512
+      },
+      "coarse": {
+        "mean": 0.838,
+        "sd": 0.006082762530298225
+      },
+      "latency_mean_ms": {
+        "mean": 0.2866666666666667,
+        "sd": 0.011547005383792493
+      },
+      "rows": [
+        {
+          "seed": 42,
+          "model_id": "tuple_head_60M_f100_s42",
+          "checkpoint": "backend/models/compact_llm/tuple_head_runs/60M/seed_42/compactlm_tuple_classifier_best.pt",
+          "per_row_jsonl": "backend/reports/tuple_head_60M/per_row/tuple_head_60M_f100_s42.jsonl",
+          "parameter_count": 62235136,
+          "rows": 1000,
+          "strict": 0.531,
+          "coarse": 0.841,
+          "latency_mean_ms": 0.3,
+          "success_rate": 1.0
+        },
+        {
+          "seed": 43,
+          "model_id": "tuple_head_60M_f100_s43",
+          "checkpoint": "backend/models/compact_llm/tuple_head_runs/60M/seed_43/compactlm_tuple_classifier_best.pt",
+          "per_row_jsonl": "backend/reports/tuple_head_60M/per_row/tuple_head_60M_f100_s43.jsonl",
+          "parameter_count": 62235136,
+          "rows": 1000,
+          "strict": 0.513,
+          "coarse": 0.831,
+          "latency_mean_ms": 0.28,
+          "success_rate": 1.0
+        },
+        {
+          "seed": 44,
+          "model_id": "tuple_head_60M_f100_s44",
+          "checkpoint": "backend/models/compact_llm/tuple_head_runs/60M/seed_44/compactlm_tuple_classifier_best.pt",
+          "per_row_jsonl": "backend/reports/tuple_head_60M/per_row/tuple_head_60M_f100_s44.jsonl",
+          "parameter_count": 62235136,
+          "rows": 1000,
+          "strict": 0.542,
+          "coarse": 0.842,
+          "latency_mean_ms": 0.28,
+          "success_rate": 1.0
+        }
+      ]
+    }
+  ],
+  "contrasts": [
+    {
+      "name": "23M tuple head vs 23M generative LM",
+      "baseline": "23M generative LM",
+      "treatment": "23M tuple head",
+      "metrics": {
+        "strict": {
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "baseline": [
+            0.438,
+            0.328,
+            0.38
+          ],
+          "treatment": [
+            0.539,
+            0.537,
+            0.529
+          ],
+          "paired_t": {
+            "n": 3,
+            "diffs": [
+              0.10100000000000003,
+              0.20900000000000002,
+              0.14900000000000002
+            ],
+            "mean_diff": 0.15300000000000002,
+            "sd_diff": 0.05411099703387472,
+            "t": 4.897410657433272,
+            "p_two": 0.039254754783771356,
+            "ci95": [
+              0.018580831649407353,
+              0.28741916835059267
+            ]
+          }
+        },
+        "coarse": {
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "baseline": [
+            0.704,
+            0.545,
+            0.612
+          ],
+          "treatment": [
+            0.871,
+            0.855,
+            0.85
+          ],
+          "paired_t": {
+            "n": 3,
+            "diffs": [
+              0.16700000000000004,
+              0.30999999999999994,
+              0.238
+            ],
+            "mean_diff": 0.2383333333333333,
+            "sd_diff": 0.0715005827482079,
+            "t": 5.773455636358838,
+            "p_two": 0.028714585736424086,
+            "ci95": [
+              0.0607160393185861,
+              0.4159506273480805
+            ]
+          }
+        },
+        "latency_mean_ms": {
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "baseline": [
+            205.34,
+            199.86,
+            204.95
+          ],
+          "treatment": [
+            0.26,
+            0.25,
+            0.27
+          ],
+          "paired_t": {
+            "n": 3,
+            "diffs": [
+              -205.08,
+              -199.61,
+              -204.67999999999998
+            ],
+            "mean_diff": -203.12333333333333,
+            "sd_diff": 3.0492020814195437,
+            "t": -115.38098300532901,
+            "p_two": 7.510737789841725e-05,
+            "ci95": [
+              -210.69797121444137,
+              -195.5486954522253
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "23M tuple head vs 60M generative LM",
+      "baseline": "60M generative LM",
+      "treatment": "23M tuple head",
+      "metrics": {
+        "strict": {
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "baseline": [
+            0.467,
+            0.386,
+            0.449
+          ],
+          "treatment": [
+            0.539,
+            0.537,
+            0.529
+          ],
+          "paired_t": {
+            "n": 3,
+            "diffs": [
+              0.07200000000000001,
+              0.15100000000000002,
+              0.08000000000000002
+            ],
+            "mean_diff": 0.10100000000000002,
+            "sd_diff": 0.043485629810317804,
+            "t": 4.022872206922698,
+            "p_two": 0.05659649202631232,
+            "ci95": [
+              -0.007024292929686107,
+              0.20902429292968616
+            ]
+          }
+        },
+        "coarse": {
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "baseline": [
+            0.74,
+            0.641,
+            0.736
+          ],
+          "treatment": [
+            0.871,
+            0.855,
+            0.85
+          ],
+          "paired_t": {
+            "n": 3,
+            "diffs": [
+              0.131,
+              0.21399999999999997,
+              0.11399999999999999
+            ],
+            "mean_diff": 0.153,
+            "sd_diff": 0.05350700888668697,
+            "t": 4.952692723288697,
+            "p_two": 0.03843290782141139,
+            "ci95": [
+              0.02008122138326804,
+              0.285918778616732
+            ]
+          }
+        },
+        "latency_mean_ms": {
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "baseline": [
+            393.9,
+            390.49,
+            387.35
+          ],
+          "treatment": [
+            0.26,
+            0.25,
+            0.27
+          ],
+          "paired_t": {
+            "n": 3,
+            "diffs": [
+              -393.64,
+              -390.24,
+              -387.08000000000004
+            ],
+            "mean_diff": -390.32,
+            "sd_diff": 3.2807316257200654,
+            "t": -206.06808125059655,
+            "p_two": 2.3548497625656257e-05,
+            "ci95": [
+              -398.46978915348217,
+              -382.1702108465178
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "23M tuple head vs 23M policy-only LM",
+      "baseline": "23M policy-only LM",
+      "treatment": "23M tuple head",
+      "metrics": {
+        "strict": {
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "baseline": [
+            0.524,
+            0.499,
+            0.508
+          ],
+          "treatment": [
+            0.539,
+            0.537,
+            0.529
+          ],
+          "paired_t": {
+            "n": 3,
+            "diffs": [
+              0.015000000000000013,
+              0.038000000000000034,
+              0.02100000000000002
+            ],
+            "mean_diff": 0.024666666666666687,
+            "sd_diff": 0.011930353445448865,
+            "t": 3.5811109968691213,
+            "p_two": 0.06989952809618306,
+            "ci95": [
+              -0.004969974241316056,
+              0.054303307574649434
+            ]
+          }
+        },
+        "coarse": {
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "baseline": [
+            0.83,
+            0.805,
+            0.758
+          ],
+          "treatment": [
+            0.871,
+            0.855,
+            0.85
+          ],
+          "paired_t": {
+            "n": 3,
+            "diffs": [
+              0.041000000000000036,
+              0.04999999999999993,
+              0.09199999999999997
+            ],
+            "mean_diff": 0.06099999999999998,
+            "sd_diff": 0.027221315177632384,
+            "t": 3.8813370541522447,
+            "p_two": 0.06042588078206844,
+            "ci95": [
+              -0.006621495595360273,
+              0.12862149559536024
+            ]
+          }
+        },
+        "latency_mean_ms": {
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "baseline": [
+            205.5,
+            212.68,
+            202.57
+          ],
+          "treatment": [
+            0.26,
+            0.25,
+            0.27
+          ],
+          "paired_t": {
+            "n": 3,
+            "diffs": [
+              -205.24,
+              -212.43,
+              -202.29999999999998
+            ],
+            "mean_diff": -206.65666666666667,
+            "sd_diff": 5.211471321357668,
+            "t": -68.68306939013213,
+            "p_two": 0.00021191541159267386,
+            "ci95": [
+              -219.60267910959615,
+              -193.71065422373718
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "60M tuple head vs 60M generative LM",
+      "baseline": "60M generative LM",
+      "treatment": "60M tuple head",
+      "metrics": {
+        "strict": {
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "baseline": [
+            0.467,
+            0.386,
+            0.449
+          ],
+          "treatment": [
+            0.531,
+            0.513,
+            0.542
+          ],
+          "paired_t": {
+            "n": 3,
+            "diffs": [
+              0.064,
+              0.127,
+              0.09300000000000003
+            ],
+            "mean_diff": 0.09466666666666668,
+            "sd_diff": 0.031533051443419384,
+            "t": 5.199860747510118,
+            "p_two": 0.03505127499792799,
+            "ci95": [
+              0.016334224410476134,
+              0.17299910892285722
+            ]
+          }
+        },
+        "coarse": {
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "baseline": [
+            0.74,
+            0.641,
+            0.736
+          ],
+          "treatment": [
+            0.841,
+            0.831,
+            0.842
+          ],
+          "paired_t": {
+            "n": 3,
+            "diffs": [
+              0.10099999999999998,
+              0.18999999999999995,
+              0.10599999999999998
+            ],
+            "mean_diff": 0.1323333333333333,
+            "sd_diff": 0.05000333322222961,
+            "t": 4.583855557180817,
+            "p_two": 0.044443716904788565,
+            "ci95": [
+              0.00811816756431391,
+              0.25654849910235267
+            ]
+          }
+        },
+        "latency_mean_ms": {
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "baseline": [
+            393.9,
+            390.49,
+            387.35
+          ],
+          "treatment": [
+            0.3,
+            0.28,
+            0.28
+          ],
+          "paired_t": {
+            "n": 3,
+            "diffs": [
+              -393.59999999999997,
+              -390.21000000000004,
+              -387.07000000000005
+            ],
+            "mean_diff": -390.29333333333335,
+            "sd_diff": 3.265797503418278,
+            "t": -206.99626430639938,
+            "p_two": 2.333779287307454e-05,
+            "ci95": [
+              -398.4060240704142,
+              -382.1806425962525
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "headline": {
+    "tuple23_vs_gen60_strict_delta": 0.10100000000000003,
+    "tuple23_vs_gen60_coarse_delta": 0.15300000000000002,
+    "tuple23_vs_gen60_latency_speedup": 1502.230769230769
+  },
+  "artifacts": {
+    "scale_grid_summary_sha256": "638c814a9f0c9e3a53eeee96166ccbbd882d3c91c88eb7cd3ecec798f8346c87",
+    "tuple_frequency_summary_sha256": "e6c1607a83bbec752c3dffc02f2e2dddb822743e7be8b2705cc9df26aeadc047",
+    "three_seeds_report_sha256": "4464958e3f719b0558ad12afd4a1627ce14a2593e458bdd44e85d081c18a2545"
+  }
+}

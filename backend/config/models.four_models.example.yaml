@@ -1,0 +1,64 @@
+runtime:
+  host: 0.0.0.0
+  port: 8100
+  request_timeout_seconds: 60
+
+models:
+  - id: gemini_api
+    name: Gemini API
+    enabled: true
+    mode: local_adapter
+    adapter: gemini
+    model_dir: models/gemini_api
+    env_key: GEMINI_API_KEY
+    options:
+      model_name: gemini-3.1-flash-lite
+      timeout_seconds: 30
+      health_timeout_seconds: 10
+
+  - id: qwen3_0.6B
+    name: Qwen3 0.6B
+    enabled: true
+    mode: remote_endpoint
+    adapter: remote
+    endpoint: http://127.0.0.1:8103/predict
+    options:
+      timeout_seconds: 30
+      health_endpoint: http://127.0.0.1:8103/health?load_model=true
+      health_timeout_seconds: 30
+
+  - id: sbert
+    name: SBERT
+    enabled: true
+    mode: local_adapter
+    adapter: sbert
+    model_dir: models/sbert_emotion
+    options:
+      model_name: models/sbert_emotion/finetuned_model
+      profiles_path: profiles.json
+      device: cpu
+      local_files_only: true
+
+  - id: compact_llm
+    name: CompactLM FP32
+    enabled: true
+    mode: local_adapter
+    adapter: custom_pytorch
+    model_dir: models/compact_llm
+    checkpoint: checkpoint/sentilight_compactlm_final.pt
+    tokenizer_dir: tokenizer
+    options:
+      device: cpu
+      max_new_tokens: 96
+
+  - id: compact_llm_q4
+    name: CompactLM Q4
+    enabled: true
+    mode: local_adapter
+    adapter: custom_pytorch
+    model_dir: models/compact_llm_q4
+    checkpoint: checkpoint/sentilight_compactlm_mixed4_inference.pt
+    tokenizer_dir: tokenizer
+    options:
+      device: cpu
+      max_new_tokens: 48

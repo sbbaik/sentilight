@@ -1,0 +1,64 @@
+{
+  "dataset_version": "sentilight_color_emotion_v1",
+  "seed": 42,
+  "base_train_rows": 36000,
+  "base_val_rows": 2000,
+  "prepared_train_rows": 81125,
+  "prepared_val_rows": 4505,
+  "prepared_test_rows": 85,
+  "required_validation_rows": 85,
+  "color_counts": {
+    "blue": 7200,
+    "green": 6414,
+    "none": 38240,
+    "orange": 6426,
+    "purple": 6424,
+    "red": 7461,
+    "white": 6456,
+    "yellow": 7094
+  },
+  "emotion_counts": {
+    "anger": 8451,
+    "anxiety": 8430,
+    "calm": 8482,
+    "happiness": 8470,
+    "none": 43400,
+    "sadness": 8482
+  },
+  "intensity_counts": {
+    "bright": 9249,
+    "dark": 9683,
+    "neutral": 47056,
+    "soft": 9668,
+    "strong": 10059
+  },
+  "color_profiles": [
+    "blue",
+    "green",
+    "orange",
+    "purple",
+    "red",
+    "white",
+    "yellow"
+  ],
+  "emotion_profiles": [
+    "anger",
+    "anxiety",
+    "calm",
+    "happiness",
+    "sadness"
+  ],
+  "intensity_modifiers": [
+    "bright",
+    "dark",
+    "neutral",
+    "soft",
+    "strong"
+  ],
+  "files": {
+    "train": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/train.jsonl",
+    "val": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/val.jsonl",
+    "test": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/test.jsonl",
+    "required_validation": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/required_validation.jsonl"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "base_model": "models/qwen",
+  "dataset_dir": "models/compact_llm/datasets/sft_full_runs/LATEST",
+  "train_rows": 84035,
+  "val_rows": 4665,
+  "required_rows": 102,
+  "format": "messages JSONL for Qwen3 chat-template SFT"
+}

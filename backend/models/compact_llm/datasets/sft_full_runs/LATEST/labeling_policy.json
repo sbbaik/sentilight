@@ -1,0 +1,150 @@
+{
+  "system_prompt": "당신은 감정 기반 스마트 조명 제어 모델입니다. 반드시 JSON만 출력하세요. 규칙: 명시적 색상 요청이 있으면 hue는 그 색상을 우선하되, 감정과 강도 표현에 따라 saturation, brightness, dimmer, color temperature를 조절하세요. 애매한 감정이면 안전하고 무난한 조명값을 사용하세요. 출력 키는 H,S,B,Dimmer,CT만 사용하세요.",
+  "color_anchors": {
+    "red": {
+      "hue": 0,
+      "target": {
+        "H": 0,
+        "S": 92,
+        "B": 74,
+        "Dimmer": 72,
+        "CT": 255
+      }
+    },
+    "yellow": {
+      "hue": 55,
+      "target": {
+        "H": 55,
+        "S": 88,
+        "B": 82,
+        "Dimmer": 80,
+        "CT": 240
+      }
+    },
+    "blue": {
+      "hue": 220,
+      "target": {
+        "H": 220,
+        "S": 78,
+        "B": 64,
+        "Dimmer": 62,
+        "CT": 410
+      }
+    },
+    "green": {
+      "hue": 120,
+      "target": {
+        "H": 120,
+        "S": 74,
+        "B": 68,
+        "Dimmer": 66,
+        "CT": 320
+      }
+    },
+    "purple": {
+      "hue": 285,
+      "target": {
+        "H": 285,
+        "S": 76,
+        "B": 62,
+        "Dimmer": 60,
+        "CT": 340
+      }
+    },
+    "orange": {
+      "hue": 28,
+      "target": {
+        "H": 28,
+        "S": 90,
+        "B": 78,
+        "Dimmer": 76,
+        "CT": 250
+      }
+    },
+    "white": {
+      "hue": 45,
+      "target": {
+        "H": 45,
+        "S": 6,
+        "B": 84,
+        "Dimmer": 84,
+        "CT": 285
+      }
+    }
+  },
+  "emotion_adjustments": {
+    "sadness": {
+      "H": -4,
+      "S": -28,
+      "B": -36,
+      "Dimmer": -38,
+      "CT": 90
+    },
+    "happiness": {
+      "H": 2,
+      "S": 6,
+      "B": 14,
+      "Dimmer": 14,
+      "CT": -25
+    },
+    "anger": {
+      "H": 0,
+      "S": 12,
+      "B": 10,
+      "Dimmer": 12,
+      "CT": -20
+    },
+    "calm": {
+      "H": 3,
+      "S": -22,
+      "B": -8,
+      "Dimmer": -8,
+      "CT": 45
+    },
+    "anxiety": {
+      "H": -2,
+      "S": -30,
+      "B": -30,
+      "Dimmer": -32,
+      "CT": 65
+    }
+  },
+  "intensity_adjustments": {
+    "neutral": {
+      "H": 0,
+      "S": 0,
+      "B": 0,
+      "Dimmer": 0,
+      "CT": 0
+    },
+    "soft": {
+      "H": -3,
+      "S": -24,
+      "B": -8,
+      "Dimmer": -12,
+      "CT": 18
+    },
+    "strong": {
+      "H": 2,
+      "S": 10,
+      "B": 8,
+      "Dimmer": 8,
+      "CT": -10
+    },
+    "bright": {
+      "H": 1,
+      "S": 4,
+      "B": 16,
+      "Dimmer": 16,
+      "CT": -8
+    },
+    "dark": {
+      "H": -2,
+      "S": -8,
+      "B": -30,
+      "Dimmer": -32,
+      "CT": 38
+    }
+  },
+  "hue_policy": "Explicit color requests keep hue within distance <= 18 of the color anchor; emotion and intensity adjust S/B/Dimmer/CT primarily."
+}

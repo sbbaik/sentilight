@@ -1,0 +1,61 @@
+{
+  "source_corpus": "backend/models/compact_llm/datasets/sentilight_color_emotion_v1/pretrain_corpus.txt",
+  "removed_exact": 6000,
+  "removed_normalized": 6,
+  "kept_lines": 245298,
+  "residual_overlap": {
+    "base_val": {
+      "rows": 2000,
+      "exact": 0,
+      "normalized_only": 0,
+      "near_dup": 11,
+      "pending": 2000,
+      "max_jaccard": 0.987
+    },
+    "base_test": {
+      "rows": 2000,
+      "exact": 0,
+      "normalized_only": 0,
+      "near_dup": 8,
+      "pending": 2000,
+      "max_jaccard": 0.9773
+    },
+    "rule_1000": {
+      "rows": 1000,
+      "exact": 0,
+      "normalized_only": 0,
+      "near_dup": 0,
+      "pending": 1000,
+      "max_jaccard": 0.1818
+    }
+  },
+  "ban_source": [
+    "base_val val_kote.jsonl (2000)",
+    "base_test test_kote.jsonl (2000)"
+  ],
+  "near_dup_corpus_lines_removed": 40,
+  "kept_lines_final": 245258,
+  "residual_overlap_final": {
+    "base_val": {
+      "rows": 2000,
+      "exact": 0,
+      "norm": 0,
+      "near": 0,
+      "maxJ": 0.7432
+    },
+    "base_test": {
+      "rows": 2000,
+      "exact": 0,
+      "norm": 0,
+      "near": 0,
+      "maxJ": 0.7636
+    },
+    "rule_1000": {
+      "rows": 1000,
+      "exact": 0,
+      "norm": 0,
+      "near": 0,
+      "maxJ": 0.1818
+    }
+  }
+}

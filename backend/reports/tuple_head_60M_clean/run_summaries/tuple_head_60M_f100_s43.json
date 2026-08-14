@@ -1,0 +1,111 @@
+{
+  "dataset": "backend/reports/benchmark_datasets/v3_test_mixed_2000.jsonl",
+  "segment": "rule",
+  "rows": 1000,
+  "checkpoint": "backend/models/compact_llm/tuple_head_runs_clean/60M/seed_43/compactlm_tuple_classifier_best.pt",
+  "model_id": "tuple_head_60M_f100_s43",
+  "display_name": "Tuple Head 60M 100% seed 43 (clean backbone)",
+  "device": "cuda:0",
+  "parameter_count": 62235136,
+  "tuple_count": 240,
+  "checkpoint_metadata": {
+    "train_jsonl": "backend/models/compact_llm/datasets/policy_only/train_policy_48035.jsonl",
+    "val_jsonl": "backend/models/compact_llm/datasets/policy_only/val_policy_2665.jsonl",
+    "pretrained_checkpoint": "backend/models/compact_llm/scale_grid_runs_clean/60M/seed_43/pretrain/compactlm_pretrain_best.pt",
+    "tokenizer_path": "backend/models/compact_llm/tokenizer/tokenizer.json",
+    "seed": 43,
+    "tuple_count": 240,
+    "train_filter": {
+      "input_rows": 48035,
+      "kept_rows": 48035,
+      "dropped_rows": 0,
+      "kept_by_source": {
+        "color_adjective_mixed_emotion": 2962,
+        "color_adjective_sft": 411,
+        "required_validation": 720,
+        "synthetic_color": 4458,
+        "synthetic_emotion": 174,
+        "synthetic_fallback": 8,
+        "synthetic_mixed": 39232,
+        "targeted_hard_case": 70
+      },
+      "dropped_by_source": {},
+      "dropped_examples": [],
+      "max_rows": null
+    },
+    "val_filter": {
+      "input_rows": 2665,
+      "kept_rows": 2665,
+      "dropped_rows": 0,
+      "kept_by_source": {
+        "color_adjective_mixed_emotion": 139,
+        "color_adjective_sft": 20,
+        "required_validation": 36,
+        "synthetic_color": 265,
+        "synthetic_emotion": 18,
+        "synthetic_mixed": 2184,
+        "targeted_hard_case": 3
+      },
+      "dropped_by_source": {},
+      "dropped_examples": [],
+      "max_rows": null
+    },
+    "freeze_backbone": false,
+    "parameter_count": 62235136,
+    "trainable_parameter_count": 62235136
+  },
+  "per_row_jsonl": "backend/reports/tuple_head_60M_clean/per_row/tuple_head_60M_f100_s43.jsonl",
+  "coarse_dimensions": [
+    "H",
+    "S",
+    "B",
+    "CT",
+    "Dimmer"
+  ],
+  "metrics": {
+    "model_id": "tuple_head_60M_f100_s43",
+    "display_name": "Tuple Head 60M 100% seed 43 (clean backbone)",
+    "adapter": "custom_pytorch",
+    "mode": "tuple_classifier",
+    "successes": 1000,
+    "errors": 0,
+    "success_rate": 1.0,
+    "semantic_passes": 518,
+    "semantic_pass_rate": 0.518,
+    "strict_semantic_passes": 518,
+    "strict_semantic_pass_rate": 0.518,
+    "coarse_3bin_passes": 846,
+    "coarse_3bin_pass_rate": 0.846,
+    "coarse_pass_delta": 328,
+    "latency": {
+      "mean_ms": 0.28,
+      "p50_ms": 0.08,
+      "p95_ms": 3.21,
+      "max_ms": 3.21
+    },
+    "mae": {
+      "H": 5.1,
+      "S": 6.59,
+      "B": 4.0,
+      "Dimmer": 4.13,
+      "CT": 8.39
+    },
+    "coarse_match_rates": {
+      "H": 0.98,
+      "S": 0.901,
+      "B": 0.901,
+      "CT": 0.951,
+      "Dimmer": 0.929
+    },
+    "all_5_coarse_match_rate": 0.846,
+    "coarse_failure_breakdown": {
+      "H": 20,
+      "S": 99,
+      "B": 99,
+      "CT": 49,
+      "Dimmer": 71
+    },
+    "top_coarse_failure_dimension": "S",
+    "error_samples": []
+  }
+}

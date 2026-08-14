@@ -1,0 +1,6 @@
+{
+  "base_model": "models/qwen",
+  "train_rows": 84035,
+  "val_rows": 512,
+  "output_dir": "qwen_service/training/outputs/qwen3_0_6b_sentilight_lora_full"
+}

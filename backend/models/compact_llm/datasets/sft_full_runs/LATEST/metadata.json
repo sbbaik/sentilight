@@ -1,0 +1,76 @@
+{
+  "dataset_version": "sentilight_color_emotion_v1",
+  "seed": 42,
+  "base_train_rows": 36000,
+  "base_val_rows": 2000,
+  "prepared_train_rows": 84035,
+  "prepared_val_rows": 4665,
+  "prepared_test_rows": 102,
+  "required_validation_rows": 102,
+  "color_counts": {
+    "blue": 7844,
+    "green": 6708,
+    "none": 38240,
+    "orange": 6662,
+    "purple": 6688,
+    "red": 8235,
+    "white": 6708,
+    "yellow": 7717
+  },
+  "emotion_counts": {
+    "anger": 9096,
+    "anxiety": 9091,
+    "calm": 9074,
+    "happiness": 9087,
+    "none": 43330,
+    "sadness": 9124
+  },
+  "intensity_counts": {
+    "bright": 9959,
+    "dark": 9803,
+    "neutral": 47679,
+    "soft": 11036,
+    "strong": 10325
+  },
+  "source_counts": {
+    "base_train": 36000,
+    "base_val": 2000,
+    "color_adjective_mixed_emotion": 3101,
+    "color_adjective_sft": 431,
+    "required_validation": 858,
+    "synthetic_color": 4723,
+    "synthetic_emotion": 192,
+    "synthetic_fallback": 8,
+    "synthetic_mixed": 41416,
+    "targeted_hard_case": 73
+  },
+  "color_profiles": [
+    "blue",
+    "green",
+    "orange",
+    "purple",
+    "red",
+    "white",
+    "yellow"
+  ],
+  "emotion_profiles": [
+    "anger",
+    "anxiety",
+    "calm",
+    "happiness",
+    "sadness"
+  ],
+  "intensity_modifiers": [
+    "bright",
+    "dark",
+    "neutral",
+    "soft",
+    "strong"
+  ],
+  "files": {
+    "train": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/train.jsonl",
+    "val": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/val.jsonl",
+    "test": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/test.jsonl",
+    "required_validation": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/required_validation.jsonl"
+  }
+}

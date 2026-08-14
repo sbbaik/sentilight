@@ -1,0 +1,91 @@
+{
+  "total_lines": 251304,
+  "unique_lines": 64963,
+  "base_train": "/home/sbbaik/344_SmartBulb_coding/sentilight_llm_resumable/train_kote.jsonl",
+  "base_val": "/home/sbbaik/344_SmartBulb_coding/sentilight_llm_resumable/val_kote.jsonl",
+  "base_test": "/home/sbbaik/codex_work/multibulb_sentilight/Model/fineTune_CompactLLM_KOTE/test_kote.jsonl",
+  "finetune_train": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/train.jsonl",
+  "finetune_val": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/val.jsonl",
+  "finetune_test": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/test.jsonl",
+  "finetune_required_validation": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/required_validation.jsonl",
+  "source_stats": {
+    "kote_inputs": {
+      "base_train": {
+        "path": "/home/sbbaik/344_SmartBulb_coding/sentilight_llm_resumable/train_kote.jsonl",
+        "rows": 36000,
+        "missing_input": 0,
+        "repeat": 1,
+        "lines_added": 36000,
+        "sha256": "f37a350e080e2295f321ba2876f0b33ba62ebca33f917824a97ad378651a5e02"
+      },
+      "base_val": {
+        "path": "/home/sbbaik/344_SmartBulb_coding/sentilight_llm_resumable/val_kote.jsonl",
+        "rows": 2000,
+        "missing_input": 0,
+        "repeat": 1,
+        "lines_added": 2000,
+        "sha256": "f4214e9293bec84951bd9ace716d4498f274a41a3d16aef7e95041e427297198"
+      },
+      "base_test": {
+        "path": "/home/sbbaik/codex_work/multibulb_sentilight/Model/fineTune_CompactLLM_KOTE/test_kote.jsonl",
+        "rows": 2000,
+        "missing_input": 0,
+        "repeat": 1,
+        "lines_added": 2000,
+        "sha256": "09470a4e23774b815eb0fee846d2e788607f12501c9b599d9df2808c35f33fde"
+      }
+    },
+    "finetune_jsonl_inputs_only": {
+      "finetune_train": {
+        "path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/train.jsonl",
+        "rows": 81125,
+        "missing_input": 0,
+        "repeat": 1,
+        "lines_added": 81125,
+        "sha256": "b2ef33df4fbec23850373986fb67b08cb875964adb4db1cf865b62dbd632b232"
+      },
+      "finetune_val": {
+        "path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/val.jsonl",
+        "rows": 4505,
+        "missing_input": 0,
+        "repeat": 1,
+        "lines_added": 4505,
+        "sha256": "95be284945f26cac2167b24dc0bc4b8284c86fbd47030ffe151ca315c4e09ef9"
+      },
+      "finetune_test": {
+        "path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/test.jsonl",
+        "rows": 85,
+        "missing_input": 0,
+        "repeat": 1,
+        "lines_added": 85,
+        "sha256": "1336be1b2cbafdbb0292cad3ca919216cf6db02439503bc3f7b535b273d73e13"
+      },
+      "finetune_required_validation": {
+        "path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/required_validation.jsonl",
+        "rows": 85,
+        "missing_input": 0,
+        "repeat": 1,
+        "lines_added": 85,
+        "sha256": "1336be1b2cbafdbb0292cad3ca919216cf6db02439503bc3f7b535b273d73e13"
+      }
+    },
+    "generated_synthetic_inputs": {
+      "source_row_count": 24882,
+      "weighted_lines_added": 121550,
+      "weighted_lines_by_source": {
+        "synthetic_emotion": 384,
+        "required_validation": 850,
+        "synthetic_color": 11156,
+        "targeted_hard_case": 144,
+        "synthetic_mixed": 109000,
+        "synthetic_fallback": 16
+      }
+    },
+    "handwritten_semantic_inputs": {
+      "weighted_lines_added": 3954
+    }
+  },
+  "pretrain_content_policy": "Only natural/user input text is included. Finetune labels, instructions, and H/S/B/Dimmer/CT outputs are not included.",
+  "output_txt": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/pretrain_corpus.txt",
+  "sha256": "a6a433f9b64e06cf7a77bf97417ced543ea1fb39140c79b2f488aabc2fadcc15"
+}

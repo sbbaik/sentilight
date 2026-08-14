@@ -1,0 +1,507 @@
+{
+  "dataset": "backend/reports/benchmark_datasets/v3_test_mixed_2000.jsonl",
+  "dataset_rows": 2000,
+  "per_row": "backend/reports/five_model_benchmark_v3_per_row.jsonl",
+  "mode": "predict_all",
+  "records": 10000,
+  "validation_warnings": [],
+  "segment_definitions": {
+    "rule_based_1000": "source != 'natural_language_baseline'",
+    "natural_1000": "source == 'natural_language_baseline'",
+    "all_2000": "all rows"
+  },
+  "segments": {
+    "rule_based_1000": {
+      "models": [
+        {
+          "model_id": "gemini_api",
+          "display_name": "Gemini API",
+          "adapter": "gemini",
+          "model_mode": "local_adapter",
+          "n": 1000,
+          "successes": 1000,
+          "errors": 0,
+          "success_rate": 1.0,
+          "strict_passes": 54,
+          "strict_rate": 0.054,
+          "coarse_passes": 156,
+          "coarse_rate": 0.156,
+          "latency": {
+            "mean_ms": 922.73,
+            "p95_ms": 1103.71
+          },
+          "mae": {
+            "H": 21.55,
+            "S": 20.78,
+            "B": 24.99,
+            "Dimmer": 16.05,
+            "CT": 104.17
+          },
+          "coarse_match_rates": {
+            "H": 0.921,
+            "S": 0.644,
+            "B": 0.523,
+            "CT": 0.5,
+            "Dimmer": 0.712
+          }
+        },
+        {
+          "model_id": "qwen3_0.6B",
+          "display_name": "Qwen3 0.6B",
+          "adapter": "remote",
+          "model_mode": "remote_endpoint",
+          "n": 1000,
+          "successes": 1000,
+          "errors": 0,
+          "success_rate": 1.0,
+          "strict_passes": 321,
+          "strict_rate": 0.321,
+          "coarse_passes": 408,
+          "coarse_rate": 0.408,
+          "latency": {
+            "mean_ms": 894.86,
+            "p95_ms": 1010.24
+          },
+          "mae": {
+            "H": 32.87,
+            "S": 10.76,
+            "B": 11.15,
+            "Dimmer": 12.16,
+            "CT": 37.64
+          },
+          "coarse_match_rates": {
+            "H": 0.788,
+            "S": 0.767,
+            "B": 0.691,
+            "CT": 0.776,
+            "Dimmer": 0.807
+          }
+        },
+        {
+          "model_id": "sbert",
+          "display_name": "SBERT",
+          "adapter": "sbert",
+          "model_mode": "local_adapter",
+          "n": 1000,
+          "successes": 1000,
+          "errors": 0,
+          "success_rate": 1.0,
+          "strict_passes": 47,
+          "strict_rate": 0.047,
+          "coarse_passes": 103,
+          "coarse_rate": 0.103,
+          "latency": {
+            "mean_ms": 47.15,
+            "p95_ms": 58.27
+          },
+          "mae": {
+            "H": 68.71,
+            "S": 29.09,
+            "B": 26.92,
+            "Dimmer": 28.16,
+            "CT": 75.56
+          },
+          "coarse_match_rates": {
+            "H": 0.533,
+            "S": 0.409,
+            "B": 0.409,
+            "CT": 0.521,
+            "Dimmer": 0.546
+          }
+        },
+        {
+          "model_id": "compact_llm",
+          "display_name": "CompactLM FP32",
+          "adapter": "custom_pytorch",
+          "model_mode": "local_adapter",
+          "n": 1000,
+          "successes": 997,
+          "errors": 3,
+          "success_rate": 0.997,
+          "strict_passes": 368,
+          "strict_rate": 0.368,
+          "coarse_passes": 618,
+          "coarse_rate": 0.618,
+          "latency": {
+            "mean_ms": 2343.89,
+            "p95_ms": 2609.82
+          },
+          "mae": {
+            "H": 16.81,
+            "S": 7.69,
+            "B": 8.31,
+            "Dimmer": 8.71,
+            "CT": 20.11
+          },
+          "coarse_match_rates": {
+            "H": 0.8947,
+            "S": 0.8516,
+            "B": 0.7693,
+            "CT": 0.8566,
+            "Dimmer": 0.8205
+          }
+        },
+        {
+          "model_id": "compact_llm_q4",
+          "display_name": "CompactLM Q4",
+          "adapter": "custom_pytorch",
+          "model_mode": "local_adapter",
+          "n": 1000,
+          "successes": 998,
+          "errors": 2,
+          "success_rate": 0.998,
+          "strict_passes": 378,
+          "strict_rate": 0.378,
+          "coarse_passes": 626,
+          "coarse_rate": 0.626,
+          "latency": {
+            "mean_ms": 397.02,
+            "p95_ms": 462.39
+          },
+          "mae": {
+            "H": 16.29,
+            "S": 7.53,
+            "B": 8.03,
+            "Dimmer": 8.38,
+            "CT": 19.22
+          },
+          "coarse_match_rates": {
+            "H": 0.8978,
+            "S": 0.8517,
+            "B": 0.7766,
+            "CT": 0.8637,
+            "Dimmer": 0.8257
+          }
+        }
+      ]
+    },
+    "natural_1000": {
+      "models": [
+        {
+          "model_id": "gemini_api",
+          "display_name": "Gemini API",
+          "adapter": "gemini",
+          "model_mode": "local_adapter",
+          "n": 1000,
+          "successes": 1000,
+          "errors": 0,
+          "success_rate": 1.0,
+          "strict_passes": 7,
+          "strict_rate": 0.007,
+          "coarse_passes": 128,
+          "coarse_rate": 0.128,
+          "latency": {
+            "mean_ms": 968.95,
+            "p95_ms": 1144.28
+          },
+          "mae": {
+            "H": 63.2,
+            "S": 24.71,
+            "B": 17.51,
+            "Dimmer": 19.81,
+            "CT": 115.22
+          },
+          "coarse_match_rates": {
+            "H": 0.608,
+            "S": 0.597,
+            "B": 0.646,
+            "CT": 0.649,
+            "Dimmer": 0.749
+          }
+        },
+        {
+          "model_id": "qwen3_0.6B",
+          "display_name": "Qwen3 0.6B",
+          "adapter": "remote",
+          "model_mode": "remote_endpoint",
+          "n": 1000,
+          "successes": 1000,
+          "errors": 0,
+          "success_rate": 1.0,
+          "strict_passes": 102,
+          "strict_rate": 0.102,
+          "coarse_passes": 271,
+          "coarse_rate": 0.271,
+          "latency": {
+            "mean_ms": 921.53,
+            "p95_ms": 1044.9
+          },
+          "mae": {
+            "H": 55.95,
+            "S": 18.05,
+            "B": 12.41,
+            "Dimmer": 12.74,
+            "CT": 60.12
+          },
+          "coarse_match_rates": {
+            "H": 0.619,
+            "S": 0.563,
+            "B": 0.661,
+            "CT": 0.654,
+            "Dimmer": 0.711
+          }
+        },
+        {
+          "model_id": "sbert",
+          "display_name": "SBERT",
+          "adapter": "sbert",
+          "model_mode": "local_adapter",
+          "n": 1000,
+          "successes": 1000,
+          "errors": 0,
+          "success_rate": 1.0,
+          "strict_passes": 1,
+          "strict_rate": 0.001,
+          "coarse_passes": 48,
+          "coarse_rate": 0.048,
+          "latency": {
+            "mean_ms": 43.4,
+            "p95_ms": 64.67
+          },
+          "mae": {
+            "H": 85.91,
+            "S": 33.66,
+            "B": 22.88,
+            "Dimmer": 23.75,
+            "CT": 79.56
+          },
+          "coarse_match_rates": {
+            "H": 0.426,
+            "S": 0.38,
+            "B": 0.402,
+            "CT": 0.544,
+            "Dimmer": 0.523
+          }
+        },
+        {
+          "model_id": "compact_llm",
+          "display_name": "CompactLM FP32",
+          "adapter": "custom_pytorch",
+          "model_mode": "local_adapter",
+          "n": 1000,
+          "successes": 1000,
+          "errors": 0,
+          "success_rate": 1.0,
+          "strict_passes": 85,
+          "strict_rate": 0.085,
+          "coarse_passes": 299,
+          "coarse_rate": 0.299,
+          "latency": {
+            "mean_ms": 2393.75,
+            "p95_ms": 2718.04
+          },
+          "mae": {
+            "H": 49.65,
+            "S": 15.18,
+            "B": 13.52,
+            "Dimmer": 14.58,
+            "CT": 61.68
+          },
+          "coarse_match_rates": {
+            "H": 0.635,
+            "S": 0.644,
+            "B": 0.694,
+            "CT": 0.685,
+            "Dimmer": 0.736
+          }
+        },
+        {
+          "model_id": "compact_llm_q4",
+          "display_name": "CompactLM Q4",
+          "adapter": "custom_pytorch",
+          "model_mode": "local_adapter",
+          "n": 1000,
+          "successes": 1000,
+          "errors": 0,
+          "success_rate": 1.0,
+          "strict_passes": 84,
+          "strict_rate": 0.084,
+          "coarse_passes": 297,
+          "coarse_rate": 0.297,
+          "latency": {
+            "mean_ms": 407.42,
+            "p95_ms": 488.49
+          },
+          "mae": {
+            "H": 50.07,
+            "S": 15.22,
+            "B": 13.51,
+            "Dimmer": 14.52,
+            "CT": 61.64
+          },
+          "coarse_match_rates": {
+            "H": 0.634,
+            "S": 0.64,
+            "B": 0.689,
+            "CT": 0.673,
+            "Dimmer": 0.736
+          }
+        }
+      ]
+    },
+    "all_2000": {
+      "models": [
+        {
+          "model_id": "gemini_api",
+          "display_name": "Gemini API",
+          "adapter": "gemini",
+          "model_mode": "local_adapter",
+          "n": 2000,
+          "successes": 2000,
+          "errors": 0,
+          "success_rate": 1.0,
+          "strict_passes": 61,
+          "strict_rate": 0.0305,
+          "coarse_passes": 284,
+          "coarse_rate": 0.142,
+          "latency": {
+            "mean_ms": 945.84,
+            "p95_ms": 1124.29
+          },
+          "mae": {
+            "H": 42.37,
+            "S": 22.74,
+            "B": 21.25,
+            "Dimmer": 17.93,
+            "CT": 109.69
+          },
+          "coarse_match_rates": {
+            "H": 0.7645,
+            "S": 0.6205,
+            "B": 0.5845,
+            "CT": 0.5745,
+            "Dimmer": 0.7305
+          }
+        },
+        {
+          "model_id": "qwen3_0.6B",
+          "display_name": "Qwen3 0.6B",
+          "adapter": "remote",
+          "model_mode": "remote_endpoint",
+          "n": 2000,
+          "successes": 2000,
+          "errors": 0,
+          "success_rate": 1.0,
+          "strict_passes": 423,
+          "strict_rate": 0.2115,
+          "coarse_passes": 679,
+          "coarse_rate": 0.3395,
+          "latency": {
+            "mean_ms": 908.2,
+            "p95_ms": 1030.79
+          },
+          "mae": {
+            "H": 44.41,
+            "S": 14.41,
+            "B": 11.78,
+            "Dimmer": 12.45,
+            "CT": 48.88
+          },
+          "coarse_match_rates": {
+            "H": 0.7035,
+            "S": 0.665,
+            "B": 0.676,
+            "CT": 0.715,
+            "Dimmer": 0.759
+          }
+        },
+        {
+          "model_id": "sbert",
+          "display_name": "SBERT",
+          "adapter": "sbert",
+          "model_mode": "local_adapter",
+          "n": 2000,
+          "successes": 2000,
+          "errors": 0,
+          "success_rate": 1.0,
+          "strict_passes": 48,
+          "strict_rate": 0.024,
+          "coarse_passes": 151,
+          "coarse_rate": 0.0755,
+          "latency": {
+            "mean_ms": 45.28,
+            "p95_ms": 62.51
+          },
+          "mae": {
+            "H": 77.31,
+            "S": 31.37,
+            "B": 24.9,
+            "Dimmer": 25.95,
+            "CT": 77.56
+          },
+          "coarse_match_rates": {
+            "H": 0.4795,
+            "S": 0.3945,
+            "B": 0.4055,
+            "CT": 0.5325,
+            "Dimmer": 0.5345
+          }
+        },
+        {
+          "model_id": "compact_llm",
+          "display_name": "CompactLM FP32",
+          "adapter": "custom_pytorch",
+          "model_mode": "local_adapter",
+          "n": 2000,
+          "successes": 1997,
+          "errors": 3,
+          "success_rate": 0.9985,
+          "strict_passes": 453,
+          "strict_rate": 0.2265,
+          "coarse_passes": 917,
+          "coarse_rate": 0.4585,
+          "latency": {
+            "mean_ms": 2368.86,
+            "p95_ms": 2675.72
+          },
+          "mae": {
+            "H": 33.25,
+            "S": 11.44,
+            "B": 10.92,
+            "Dimmer": 11.65,
+            "CT": 40.92
+          },
+          "coarse_match_rates": {
+            "H": 0.7646,
+            "S": 0.7476,
+            "B": 0.7316,
+            "CT": 0.7707,
+            "Dimmer": 0.7782
+          }
+        },
+        {
+          "model_id": "compact_llm_q4",
+          "display_name": "CompactLM Q4",
+          "adapter": "custom_pytorch",
+          "model_mode": "local_adapter",
+          "n": 2000,
+          "successes": 1998,
+          "errors": 2,
+          "success_rate": 0.999,
+          "strict_passes": 462,
+          "strict_rate": 0.231,
+          "coarse_passes": 923,
+          "coarse_rate": 0.4615,
+          "latency": {
+            "mean_ms": 402.23,
+            "p95_ms": 475.54
+          },
+          "mae": {
+            "H": 33.2,
+            "S": 11.38,
+            "B": 10.78,
+            "Dimmer": 11.45,
+            "CT": 40.45
+          },
+          "coarse_match_rates": {
+            "H": 0.7658,
+            "S": 0.7457,
+            "B": 0.7327,
+            "CT": 0.7683,
+            "Dimmer": 0.7808
+          }
+        }
+      ]
+    }
+  }
+}

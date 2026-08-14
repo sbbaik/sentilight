@@ -1,0 +1,77 @@
+{
+  "dataset": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v4/backend/reports/benchmark_datasets/v3_test_mixed_2000.jsonl",
+  "segment": "rule",
+  "rows": 1000,
+  "checkpoint": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v4/backend/models/compact_llm/scale_grid_runs/3M/seed_44/f50/sft/compactlm_from_scratch_best.pt",
+  "model_dir": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v4/backend/models/compact_llm",
+  "model_id": "compactlm_3M_f50_s44",
+  "display_name": "CompactLM 3M 50% seed 44",
+  "device": "cuda:0",
+  "parameter_count": 2968800,
+  "model_config": {
+    "model_name": "Sentilight-CompactLM-v0.1",
+    "vocab_size": 24000,
+    "block_size": 256,
+    "n_layer": 6,
+    "n_head": 2,
+    "d_model": 96,
+    "d_ff": 256,
+    "dropout": 0.1,
+    "rope_base": 10000.0,
+    "init_std": 0.02
+  },
+  "per_row_jsonl": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v4/backend/reports/scale_grid/per_row/compactlm_3M_f50_s44.jsonl",
+  "coarse_dimensions": [
+    "H",
+    "S",
+    "B",
+    "CT",
+    "Dimmer"
+  ],
+  "metrics": {
+    "model_id": "compactlm_3M_f50_s44",
+    "display_name": "CompactLM 3M 50% seed 44",
+    "adapter": "custom_pytorch",
+    "mode": "direct_checkpoint",
+    "successes": 1000,
+    "errors": 0,
+    "success_rate": 1.0,
+    "semantic_passes": 191,
+    "semantic_pass_rate": 0.191,
+    "strict_semantic_passes": 191,
+    "strict_semantic_pass_rate": 0.191,
+    "coarse_3bin_passes": 251,
+    "coarse_3bin_pass_rate": 0.251,
+    "coarse_pass_delta": 60,
+    "latency": {
+      "mean_ms": 144.7,
+      "p50_ms": 144.31,
+      "p95_ms": 155.87,
+      "max_ms": 344.46
+    },
+    "mae": {
+      "H": 41.67,
+      "S": 14.87,
+      "B": 14.99,
+      "Dimmer": 17.11,
+      "CT": 59.8
+    },
+    "coarse_match_rates": {
+      "H": 0.761,
+      "S": 0.679,
+      "B": 0.592,
+      "CT": 0.664,
+      "Dimmer": 0.658
+    },
+    "all_5_coarse_match_rate": 0.251,
+    "coarse_failure_breakdown": {
+      "H": 239,
+      "S": 321,
+      "B": 408,
+      "CT": 336,
+      "Dimmer": 342
+    },
+    "top_coarse_failure_dimension": "B",
+    "error_samples": []
+  }
+}

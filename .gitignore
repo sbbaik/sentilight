@@ -1,0 +1,23 @@
+# Generated analysis outputs and figures. Reproduce with the commands in README.
+results/
+
+# Model weights and derived artifacts are distributed separately.
+*.pt
+*.bin
+*.ckpt
+*.gguf
+*.safetensors
+!backend/qwen_service/training/outputs/qwen3_0_6b_sentilight_lora_full/adapter_model.safetensors
+
+# Deployment config carries live host and bulb addresses.
+backend/config/models.yaml
+backend/config/frontend.yaml
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.DS_Store
+build/
+node_modules/

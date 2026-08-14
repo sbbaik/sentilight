@@ -1,0 +1,38 @@
+{
+  "frozen_at": "2026-08-05",
+  "purpose": "Evaluation split freeze BEFORE clean-corpus retraining (pre_result_02 next-step 2)",
+  "splits": {
+    "rule_1000": {
+      "path": "without_human_test/freeze/rule_1000.jsonl",
+      "rows": 1000,
+      "sha256": "c9608cb79f5dad1c0c0daa3c5c7de08473fa79296cee51b3727ee66f708585df"
+    },
+    "natural_1000": {
+      "path": "without_human_test/freeze/natural_1000.jsonl",
+      "rows": 1000,
+      "sha256": "2f7a5b73987e0b3e887c5db6c3427c9518b45592697c9b9d37e9b07f2acd675d"
+    },
+    "benchmark_v3_test_mixed_2000": {
+      "path": "backend/reports/benchmark_datasets/v3_test_mixed_2000.jsonl",
+      "sha256": "24a4115aa8a44778d107a6bbb9e22ac9ed7c27eca24f6e6212f3c0b4a52fe294"
+    },
+    "base_val": {
+      "path": "/home/sbbaik/344_SmartBulb_coding/sentilight_llm_resumable/val_kote.jsonl",
+      "rows": 2000,
+      "sha256": "f4214e9293bec84951bd9ace716d4498f274a41a3d16aef7e95041e427297198"
+    },
+    "base_test": {
+      "path": "/home/sbbaik/codex_work/multibulb_sentilight/Model/fineTune_CompactLLM_KOTE/test_kote.jsonl",
+      "rows": 2000,
+      "sha256": "09470a4e23774b815eb0fee846d2e788607f12501c9b599d9df2808c35f33fde"
+    }
+  },
+  "corpus_report_recorded_hashes": {
+    "base_val": "f4214e9293bec84951bd9ace716d4498f274a41a3d16aef7e95041e427297198",
+    "base_test": "09470a4e23774b815eb0fee846d2e788607f12501c9b599d9df2808c35f33fde"
+  },
+  "preregistration": {
+    "path": "without_human_test/prereg_contamination_delta.md",
+    "sha256": "042a68655be267ff6b39a165615fe5a167d24faf97cfcb9e5ecd8c73c3b46503"
+  }
+}
