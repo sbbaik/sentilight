@@ -7,7 +7,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-DEFAULT_LLAMA_CPP = Path(os.getenv("LLAMA_CPP_DIR", "/home/sbbaik/344_SmartBulb_coding/sentilight_llm_resumable/llama.cpp"))
+DEFAULT_LLAMA_CPP = Path(os.getenv("LLAMA_CPP_DIR", "third_party/llama.cpp"))
 
 
 def parse_args() -> argparse.Namespace:

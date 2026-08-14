@@ -22,9 +22,9 @@ from compact_llm.training_data import (
     sha256_file,
 )
 
-DEFAULT_BASE_TRAIN = Path("/home/sbbaik/344_SmartBulb_coding/sentilight_llm_resumable/train_kote.jsonl")
-DEFAULT_BASE_VAL = Path("/home/sbbaik/344_SmartBulb_coding/sentilight_llm_resumable/val_kote.jsonl")
-DEFAULT_BASE_TEST = Path("/home/sbbaik/codex_work/multibulb_sentilight/Model/fineTune_CompactLLM_KOTE/test_kote.jsonl")
+DEFAULT_BASE_TRAIN = Path("data/external/kote/train_kote.jsonl")   # supply the KOTE source split, or pass --base-train-jsonl
+DEFAULT_BASE_VAL = Path("data/external/kote/val_kote.jsonl")     # supply the KOTE source split, or pass --base-val-jsonl
+DEFAULT_BASE_TEST = Path("data/external/kote/test_kote.jsonl")    # supply the KOTE source split, or pass --base-test-jsonl
 DEFAULT_OUTPUT_DIR = BASE_DIR / "datasets" / "sentilight_color_emotion_v1"
 DEFAULT_FINETUNE_DATASET_DIR = DEFAULT_OUTPUT_DIR
 

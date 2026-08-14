@@ -1,9 +1,9 @@
 {
-  "dataset": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v4/backend/reports/benchmark_datasets/v3_test_mixed_2000.jsonl",
+  "dataset": "<prior-tree-v4>/backend/reports/benchmark_datasets/v3_test_mixed_2000.jsonl",
   "segment": "rule",
   "rows": 1000,
-  "checkpoint": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v4/backend/models/compact_llm/a2_policy_only_runs/23M/seed_43/compactlm_from_scratch_best.pt",
-  "model_dir": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v4/backend/models/compact_llm",
+  "checkpoint": "<prior-tree-v4>/backend/models/compact_llm/a2_policy_only_runs/23M/seed_43/compactlm_from_scratch_best.pt",
+  "model_dir": "<prior-tree-v4>/backend/models/compact_llm",
   "model_id": "a2_policy_lm_23M_s43",
   "display_name": "A2 Policy-only Tied LM 23M seed 43",
   "device": "cuda:0",
@@ -20,7 +20,7 @@
     "rope_base": 10000.0,
     "init_std": 0.02
   },
-  "per_row_jsonl": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v4/backend/reports/a2_policy_only/per_row/a2_policy_lm_23M_s43.jsonl",
+  "per_row_jsonl": "<prior-tree-v4>/backend/reports/a2_policy_only/per_row/a2_policy_lm_23M_s43.jsonl",
   "coarse_dimensions": [
     "H",
     "S",

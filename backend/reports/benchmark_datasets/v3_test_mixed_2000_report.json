@@ -1,6 +1,6 @@
 {
   "dataset_version": "v3_test_mixed_2000",
-  "path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/reports/benchmark_datasets/v3_test_mixed_2000.jsonl",
+  "path": "<prior-tree-v3>/backend/reports/benchmark_datasets/v3_test_mixed_2000.jsonl",
   "rows": 2000,
   "seed": 20260727,
   "source_counts": {
@@ -71,31 +71,31 @@
   },
   "sources": {
     "base_test": {
-      "path": "/home/sbbaik/codex_work/multibulb_sentilight/Model/fineTune_CompactLLM_KOTE/test_kote.jsonl",
+      "path": "<prior-tree>/Model/fineTune_CompactLLM_KOTE/test_kote.jsonl",
       "exists": true,
       "rows": 2000,
       "sha256": "09470a4e23774b815eb0fee846d2e788607f12501c9b599d9df2808c35f33fde"
     },
     "v3_train": {
-      "path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/train.jsonl",
+      "path": "<prior-tree-v3>/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/train.jsonl",
       "exists": true,
       "rows": 84035,
       "sha256": "01300d3a911db54f316d53639f240eab569838f99e5810469d8e6fe11610c1a1"
     },
     "v3_val": {
-      "path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/val.jsonl",
+      "path": "<prior-tree-v3>/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/val.jsonl",
       "exists": true,
       "rows": 4665,
       "sha256": "fe47cf3303d1cc2844ac7b3067b171320fe9efb68240165e8ba160b970619d7a"
     },
     "v3_required_validation": {
-      "path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/required_validation.jsonl",
+      "path": "<prior-tree-v3>/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/required_validation.jsonl",
       "exists": true,
       "rows": 102,
       "sha256": "763e0bcbcdd0fc65a8469352d3576b6c7e16d633493e0089b7f187931edce021"
     },
     "output_jsonl": {
-      "path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/reports/benchmark_datasets/v3_test_mixed_2000.jsonl",
+      "path": "<prior-tree-v3>/backend/reports/benchmark_datasets/v3_test_mixed_2000.jsonl",
       "exists": true,
       "rows": 2000,
       "sha256": "24a4115aa8a44778d107a6bbb9e22ac9ed7c27eca24f6e6212f3c0b4a52fe294"

@@ -1,9 +1,9 @@
 {
-  "dataset": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v4/backend/reports/benchmark_datasets/v3_test_mixed_2000.jsonl",
+  "dataset": "<prior-tree-v4>/backend/reports/benchmark_datasets/v3_test_mixed_2000.jsonl",
   "segment": "rule",
   "rows": 1000,
-  "checkpoint": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v4/backend/models/compact_llm/scale_grid_runs/60M/seed_44/f100/sft/compactlm_from_scratch_best.pt",
-  "model_dir": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v4/backend/models/compact_llm",
+  "checkpoint": "<prior-tree-v4>/backend/models/compact_llm/scale_grid_runs/60M/seed_44/f100/sft/compactlm_from_scratch_best.pt",
+  "model_dir": "<prior-tree-v4>/backend/models/compact_llm",
   "model_id": "compactlm_60M_f100_s44",
   "display_name": "CompactLM 60M 100% seed 44",
   "device": "cuda:0",
@@ -20,7 +20,7 @@
     "rope_base": 10000.0,
     "init_std": 0.02
   },
-  "per_row_jsonl": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v4/backend/reports/scale_grid/per_row/compactlm_60M_f100_s44.jsonl",
+  "per_row_jsonl": "<prior-tree-v4>/backend/reports/scale_grid/per_row/compactlm_60M_f100_s44.jsonl",
   "coarse_dimensions": [
     "H",
     "S",

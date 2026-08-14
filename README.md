@@ -161,12 +161,16 @@ figure is computed from those.
 - The live deployment configuration, which carries host and bulb addresses.
   `backend/config/models.example.yaml` shows the schema.
 
-## A note on the run summaries
+## A note on paths in the records
 
-Files under `backend/reports/*/run_summaries/` record absolute paths from the machine that
-produced them. They are provenance records and are left byte-for-byte intact, since
-rewriting them would invalidate digests cited elsewhere. Nothing here depends on those
-paths: every script in `tools/` resolves paths relative to the repository root.
+Run summaries and dataset manifests record where each artifact came from. Those paths have
+been rewritten from the producing machine's absolute layout to repository-relative form; no
+digest published here covers those files, so nothing is invalidated by the change.
+
+Where an artifact originated in an earlier working tree rather than this one, the path is
+marked `<prior-tree-v4>/…` instead of being silently rewritten to look local. Sources outside
+the project appear as `<external>/…`. Nothing in the analysis depends on any of these paths:
+every script resolves locations relative to the repository root.
 
 ## License
 

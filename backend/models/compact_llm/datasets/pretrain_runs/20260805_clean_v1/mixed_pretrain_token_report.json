@@ -2,7 +2,7 @@
   "lines_read": 245258,
   "lines_encoded": 245258,
   "total_tokens": 5145967,
-  "tokenizer_path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v5/backend/models/compact_llm/tokenizer/tokenizer.json",
+  "tokenizer_path": "backend/models/compact_llm/tokenizer/tokenizer.json",
   "output_npy": "backend/models/compact_llm/datasets/pretrain_runs/20260805_clean_v1/pretrain_tokens.npy",
   "sha256": "f895292cb18e9534656035e3a8145ab31709866888cc5f77d21827646def5151"
 }

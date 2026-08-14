@@ -68,9 +68,9 @@
     "strong"
   ],
   "files": {
-    "train": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/train.jsonl",
-    "val": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/val.jsonl",
-    "test": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/test.jsonl",
-    "required_validation": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/required_validation.jsonl"
+    "train": "<prior-tree-v3>/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/train.jsonl",
+    "val": "<prior-tree-v3>/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/val.jsonl",
+    "test": "<prior-tree-v3>/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/test.jsonl",
+    "required_validation": "<prior-tree-v3>/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/required_validation.jsonl"
   }
 }

@@ -27,8 +27,8 @@ import sys
 import time
 from pathlib import Path
 
-REPO = Path("/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v5")
-PY = "/home/sbbaik/miniconda3/envs/sentilight/bin/python"
+REPO = Path(__file__).resolve().parents[1]
+PY = sys.executable
 SEEDS = [42, 43, 44]
 GPUS = [0, 1]
 

@@ -1,9 +1,9 @@
 {
-  "dataset": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v5/backend/reports/benchmark_datasets/v3_test_mixed_2000.jsonl",
+  "dataset": "backend/reports/benchmark_datasets/v3_test_mixed_2000.jsonl",
   "segment": "rule",
   "rows": 1000,
-  "checkpoint": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v5/backend/models/compact_llm/scale_grid_runs_clean/60M/seed_43/f100/sft/compactlm_from_scratch_best.pt",
-  "model_dir": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v5/backend/models/compact_llm",
+  "checkpoint": "backend/models/compact_llm/scale_grid_runs_clean/60M/seed_43/f100/sft/compactlm_from_scratch_best.pt",
+  "model_dir": "backend/models/compact_llm",
   "model_id": "compactlm_60M_f100_s43",
   "display_name": "CompactLM 60M 100% seed 43",
   "device": "cuda:0",
@@ -20,7 +20,7 @@
     "rope_base": 10000.0,
     "init_std": 0.02
   },
-  "per_row_jsonl": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v5/backend/reports/scale_grid_clean/per_row/compactlm_60M_f100_s43.jsonl",
+  "per_row_jsonl": "backend/reports/scale_grid_clean/per_row/compactlm_60M_f100_s43.jsonl",
   "coarse_dimensions": [
     "H",
     "S",

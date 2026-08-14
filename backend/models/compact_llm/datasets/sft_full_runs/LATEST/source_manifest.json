@@ -1,21 +1,21 @@
 {
   "sources": {
     "train_kote.jsonl": {
-      "path": "/home/sbbaik/344_SmartBulb_coding/sentilight_llm_resumable/train_kote.jsonl",
+      "path": "<external>/sentilight_llm_resumable/train_kote.jsonl",
       "exists": true,
       "rows": 36000,
       "bytes": 12415358,
       "sha256": "f37a350e080e2295f321ba2876f0b33ba62ebca33f917824a97ad378651a5e02"
     },
     "val_kote.jsonl": {
-      "path": "/home/sbbaik/344_SmartBulb_coding/sentilight_llm_resumable/val_kote.jsonl",
+      "path": "<external>/sentilight_llm_resumable/val_kote.jsonl",
       "exists": true,
       "rows": 2000,
       "bytes": 691389,
       "sha256": "f4214e9293bec84951bd9ace716d4498f274a41a3d16aef7e95041e427297198"
     },
     "test_kote.jsonl": {
-      "path": "/home/sbbaik/codex_work/multibulb_sentilight/Model/fineTune_CompactLLM_KOTE/test_kote.jsonl",
+      "path": "<prior-tree>/Model/fineTune_CompactLLM_KOTE/test_kote.jsonl",
       "exists": true,
       "rows": 2000,
       "bytes": 685608,
@@ -24,22 +24,22 @@
   },
   "generated_files": {
     "train": {
-      "path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/train.jsonl",
+      "path": "<prior-tree-v3>/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/train.jsonl",
       "rows": 84035,
       "sha256": "01300d3a911db54f316d53639f240eab569838f99e5810469d8e6fe11610c1a1"
     },
     "val": {
-      "path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/val.jsonl",
+      "path": "<prior-tree-v3>/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/val.jsonl",
       "rows": 4665,
       "sha256": "fe47cf3303d1cc2844ac7b3067b171320fe9efb68240165e8ba160b970619d7a"
     },
     "test": {
-      "path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/test.jsonl",
+      "path": "<prior-tree-v3>/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/test.jsonl",
       "rows": 102,
       "sha256": "763e0bcbcdd0fc65a8469352d3576b6c7e16d633493e0089b7f187931edce021"
     },
     "required_validation": {
-      "path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/required_validation.jsonl",
+      "path": "<prior-tree-v3>/backend/models/compact_llm/datasets/sentilight_color_emotion_v1/required_validation.jsonl",
       "rows": 102,
       "sha256": "763e0bcbcdd0fc65a8469352d3576b6c7e16d633493e0089b7f187931edce021"
     }

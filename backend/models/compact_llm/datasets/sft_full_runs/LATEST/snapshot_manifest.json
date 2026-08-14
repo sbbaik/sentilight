@@ -1,53 +1,53 @@
 {
-  "snapshot_dir": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sft_full_runs/20260714_170908_sentilight_color_adjective_sft_full",
-  "dataset_dir": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sentilight_color_emotion_v1",
+  "snapshot_dir": "<prior-tree-v3>/backend/models/compact_llm/datasets/sft_full_runs/20260714_170908_sentilight_color_adjective_sft_full",
+  "dataset_dir": "<prior-tree-v3>/backend/models/compact_llm/datasets/sentilight_color_emotion_v1",
   "created_at": "20260714_170908",
   "policy": "Full supervised finetuning dataset preserved for CompactLM, SBERT, and Qwen training reuse.",
   "copied_files": {
     "train.jsonl": {
-      "path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sft_full_runs/20260714_170908_sentilight_color_adjective_sft_full/train.jsonl",
+      "path": "<prior-tree-v3>/backend/models/compact_llm/datasets/sft_full_runs/20260714_170908_sentilight_color_adjective_sft_full/train.jsonl",
       "size_bytes": 46865261,
       "sha256": "01300d3a911db54f316d53639f240eab569838f99e5810469d8e6fe11610c1a1",
       "rows": 84035
     },
     "val.jsonl": {
-      "path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sft_full_runs/20260714_170908_sentilight_color_adjective_sft_full/val.jsonl",
+      "path": "<prior-tree-v3>/backend/models/compact_llm/datasets/sft_full_runs/20260714_170908_sentilight_color_adjective_sft_full/val.jsonl",
       "size_bytes": 2597618,
       "sha256": "fe47cf3303d1cc2844ac7b3067b171320fe9efb68240165e8ba160b970619d7a",
       "rows": 4665
     },
     "test.jsonl": {
-      "path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sft_full_runs/20260714_170908_sentilight_color_adjective_sft_full/test.jsonl",
+      "path": "<prior-tree-v3>/backend/models/compact_llm/datasets/sft_full_runs/20260714_170908_sentilight_color_adjective_sft_full/test.jsonl",
       "size_bytes": 67397,
       "sha256": "763e0bcbcdd0fc65a8469352d3576b6c7e16d633493e0089b7f187931edce021",
       "rows": 102
     },
     "required_validation.jsonl": {
-      "path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sft_full_runs/20260714_170908_sentilight_color_adjective_sft_full/required_validation.jsonl",
+      "path": "<prior-tree-v3>/backend/models/compact_llm/datasets/sft_full_runs/20260714_170908_sentilight_color_adjective_sft_full/required_validation.jsonl",
       "size_bytes": 67397,
       "sha256": "763e0bcbcdd0fc65a8469352d3576b6c7e16d633493e0089b7f187931edce021",
       "rows": 102
     },
     "metadata.json": {
-      "path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sft_full_runs/20260714_170908_sentilight_color_adjective_sft_full/metadata.json",
+      "path": "<prior-tree-v3>/backend/models/compact_llm/datasets/sft_full_runs/20260714_170908_sentilight_color_adjective_sft_full/metadata.json",
       "size_bytes": 1986,
       "sha256": "e8c0fe84c4d612b79ceefde2d3adc50c8b9cd561dd458b54be9dc54b24fb1e2f",
       "rows": null
     },
     "source_manifest.json": {
-      "path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sft_full_runs/20260714_170908_sentilight_color_adjective_sft_full/source_manifest.json",
+      "path": "<prior-tree-v3>/backend/models/compact_llm/datasets/sft_full_runs/20260714_170908_sentilight_color_adjective_sft_full/source_manifest.json",
       "size_bytes": 2017,
       "sha256": "ee306b1a012c89fafbcd9eb125ae71ff88d7d02a9d5383f4f8e5f83c42286f93",
       "rows": null
     },
     "labeling_policy.json": {
-      "path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sft_full_runs/20260714_170908_sentilight_color_adjective_sft_full/labeling_policy.json",
+      "path": "<prior-tree-v3>/backend/models/compact_llm/datasets/sft_full_runs/20260714_170908_sentilight_color_adjective_sft_full/labeling_policy.json",
       "size_bytes": 2796,
       "sha256": "7d9eca3a928bb00cb01a7ffed95ee797dec7494353300a62dd4180b84b2a174f",
       "rows": null
     },
     "dataset_card.md": {
-      "path": "/home/sbbaik/codex_work/multibulb_sentilight/New_Android_v3/backend/models/compact_llm/datasets/sft_full_runs/20260714_170908_sentilight_color_adjective_sft_full/dataset_card.md",
+      "path": "<prior-tree-v3>/backend/models/compact_llm/datasets/sft_full_runs/20260714_170908_sentilight_color_adjective_sft_full/dataset_card.md",
       "size_bytes": 1495,
       "sha256": "e0fe140a82e1d621c1a834a332f1e08728742babef449674c9d8ef1a704b8582",
       "rows": null

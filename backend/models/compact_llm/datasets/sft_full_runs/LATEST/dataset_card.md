@@ -25,21 +25,21 @@ Smart bulb control dataset for CompactLM and future local lighting models.
 
 {
   "train_kote.jsonl": {
-    "path": "/home/sbbaik/344_SmartBulb_coding/sentilight_llm_resumable/train_kote.jsonl",
+    "path": "<external>/sentilight_llm_resumable/train_kote.jsonl",
     "exists": true,
     "rows": 36000,
     "bytes": 12415358,
     "sha256": "f37a350e080e2295f321ba2876f0b33ba62ebca33f917824a97ad378651a5e02"
   },
   "val_kote.jsonl": {
-    "path": "/home/sbbaik/344_SmartBulb_coding/sentilight_llm_resumable/val_kote.jsonl",
+    "path": "<external>/sentilight_llm_resumable/val_kote.jsonl",
     "exists": true,
     "rows": 2000,
     "bytes": 691389,
     "sha256": "f4214e9293bec84951bd9ace716d4498f274a41a3d16aef7e95041e427297198"
   },
   "test_kote.jsonl": {
-    "path": "/home/sbbaik/codex_work/multibulb_sentilight/Model/fineTune_CompactLLM_KOTE/test_kote.jsonl",
+    "path": "<prior-tree>/Model/fineTune_CompactLLM_KOTE/test_kote.jsonl",
     "exists": true,
     "rows": 2000,
     "bytes": 685608,
