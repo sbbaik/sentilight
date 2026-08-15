@@ -20,6 +20,12 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.21930496
     description: Version DOI - the v1.0.0 archived release
+  - type: doi
+    value: 10.5281/zenodo.21930672
+    description: Companion dataset record (model checkpoints) - concept DOI
+  - type: doi
+    value: 10.5281/zenodo.21930673
+    description: Companion dataset record (model checkpoints) - v1.0.0 version DOI
 abstract: >-
   Code, evaluation data, per-row predictions and preregistrations
   for a study of output formulation versus model scale in

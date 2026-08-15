@@ -153,22 +153,35 @@ that evidence.
 Zenodo mints two kinds of DOI for a GitHub-archived release, and they are not
 interchangeable:
 
-| DOI | Resolves to | Use it for |
+| DOI | What it is | Use it for |
 |---|---|---|
-| **`10.5281/zenodo.21930495`** | always the latest version | the badge above, and general citation |
-| `10.5281/zenodo.21930496` | this archived release, `v1.0.0` | pinning the exact snapshot a paper used |
+| **`10.5281/zenodo.21930495`** | this repository, latest version | the badge above, and general citation |
+| `10.5281/zenodo.21930496` | this repository, release `v1.0.0` | pinning the exact code snapshot |
+| **`10.5281/zenodo.21930672`** | companion checkpoint record, latest | citing the model weights |
+| `10.5281/zenodo.21930673` | companion record, version `v1.0.0` | pinning the exact weights |
 
-Cite the concept DOI to follow the work forward, or the version DOI to pin what you ran
-against. `CITATION.cff` carries both.
+Cite a concept DOI to follow the work forward, or a version DOI to pin what you ran against.
+The two records are linked to each other by related identifiers, and `CITATION.cff` carries
+the repository DOIs.
 
 ## Model weights
 
-Checkpoints for the five families at three seeds, the merged comparator model and the
-GGUF exports total about 6.8 GB and are distributed separately.
+The trained checkpoints are archived as a companion dataset record:
 
-They are not needed to verify the analysis: per-row predictions and run summaries for all
-36 clean and 36 contaminated grid cells are in `backend/reports/`, and every statistic and
-figure is computed from those.
+**[`10.5281/zenodo.21930672`](https://doi.org/10.5281/zenodo.21930672)** — 15 checkpoints,
+6.53 GiB, with a `SHA256SUMS` covering every file.
+
+Contents: the five model families at three seeds each (42/43/44), all trained on the
+contamination-purged corpus — generative LM at 23M and 60M, the policy-only SFT variant, and
+the 240-way tuple head at 23M and 60M.
+
+Zenodo records hold no directories, so the filenames encode the original paths
+(`backend__models__compact_llm__…__seed_42__…pt`).
+
+**These weights are not needed to verify the analysis.** Per-row predictions and run
+summaries for all 36 clean and 36 contaminated grid cells are in `backend/reports/`, and
+every reported statistic and figure is computed from those. The record exists so the models
+themselves can be inspected and rerun.
 
 ## Excluded from this release
 
