@@ -55,13 +55,30 @@ git show a000280:<path>/prereg_w2_constrained_decoding.md | sha256sum
 
 Each digest matches the corresponding line in `SHA256SUMS`. Confirmed for all four.
 
+## An independent timestamp
+
+The files in this directory are contained in the Zenodo archive of release v1.0.0,
+**DOI [10.5281/zenodo.21930496](https://doi.org/10.5281/zenodo.21930496), published
+2026-08-14**. Verified by downloading that record's archive and hashing its contents: the
+four protocol documents inside it carry exactly the digests listed in `SHA256SUMS`.
+
+Zenodo is operated by CERN and its publication date is not settable by the depositor, so it
+is an independent attestation that this content existed in this form no later than that date
+— which git commit timestamps, by themselves, are not.
+
+Note what this does and does not establish. The Zenodo date is *later* than the results it
+accompanies (2026-08-05 and 2026-08-11), so it anchors the **content**, not the ordering.
+The ordering evidence remains the commit history above. The two are complementary: the
+archive fixes what the documents say, the commit graph fixes when they were written relative
+to the analysis.
+
 ## Limitations, stated plainly
 
 1. **Git commit timestamps are set by the committer** and are not independently attested.
-   They are evidence of ordering within a repository the author controls, not a trustless
-   third-party timestamp. No external timestamping service was used at the time, and adding
-   one now would only prove present-day existence, which is after the results — so it is not
-   offered as a substitute.
+   They are evidence of ordering within a repository the author controls. The Zenodo archive
+   above supplies an independent attestation, but only of content and only from 2026-08-14
+   onward; no third-party timestamp covers the moment each protocol was written, because none
+   was obtained at the time. Nothing added now could supply one retroactively.
 2. **The gaps for the two row-level protocols are short** (2–3 minutes). That is what
    happened: the protocol was written immediately before the analysis was executed. The
    ordering is what the preregistration is for; the interval is reported rather than

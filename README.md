@@ -135,9 +135,16 @@ cd preregistration && sha256sum -c SHA256SUMS
 
 `eval_split_freeze.json` records the frozen evaluation splits.
 
-Three of the four contamination predictions did not hold, and they are reported as misses
-rather than revised. The row-level protocol explicitly predicted that one contrast would be
-dropped; the data went the other way. Both outcomes stand as written.
+The outcome of every prediction and gate — including the ones that failed — is in
+[`preregistration/VERDICTS.md`](preregistration/VERDICTS.md). Three of the four contamination
+predictions did not hold and are reported as misses rather than revised; one confirmatory
+contrast was rejected on the frozen sign rule despite clearing its corrected p-value; and the
+row-level protocol predicted that a different contrast would be dropped, where the data went
+the other way. All of it stands as written.
+
+[`preregistration/PROVENANCE.md`](preregistration/PROVENANCE.md) holds the time-stamp
+evidence, and [`preregistration/README.md`](preregistration/README.md) explains how the three
+documents divide the record.
 
 `preregistration/PROVENANCE.md` records, for each protocol, the commit that introduced it and
 the commit that recorded the corresponding result, with timestamps — the digests alone show
