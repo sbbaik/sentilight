@@ -48,9 +48,12 @@ FAMILY_PATHS = {
     "B2_head60": "backend/reports/tuple_head_60M_clean/run_summaries/tuple_head_60M_f100_s{seed}.json",
 }
 FAMILY_LABEL = {
-    "A1_gen23": "A1 generative 23M", "gen60": "generative 60M",
-    "A2_policy23": "A2 policy-only 23M", "B2_head23": "B2 tuple head 23M",
-    "B2_head60": "tuple head 60M",
+    # Descriptive names are primary; the design codes used by the preregistration,
+    # VERDICTS.md and the per_row directories are kept in parentheses so a figure
+    # can still be matched to the released artifacts.
+    "A1_gen23": "Gen-Full 23M (A1)", "gen60": "Gen-Full 60M",
+    "A2_policy23": "Gen-Policy 23M (A2)", "B2_head23": "Head-Policy 23M (B2)",
+    "B2_head60": "Head-Policy 60M",
 }
 
 
@@ -100,7 +103,7 @@ def figure_f2(outdir: Path, fmt: str) -> None:
             means = [agg[(scale, f)][metric][0] for f in FRACTIONS]
             sds = [agg[(scale, f)][metric][1] for f in FRACTIONS]
             ax.errorbar(FRACTIONS, means, yerr=sds, marker="o", capsize=3, lw=1.8,
-                        color=SCALE_COLOR[scale], label=f"generative {scale}")
+                        color=SCALE_COLOR[scale], label=f"Gen-Full {scale}")
         # tuple-head band: f100 only -> horizontal span, NOT a line across fractions
         for key, ls in (("B2_head23", "-"), ("B2_head60", "--")):
             vals = fam[key][metric]
@@ -115,11 +118,11 @@ def figure_f2(outdir: Path, fmt: str) -> None:
         ax.grid(alpha=0.25, lw=0.6)
     axes[1].legend(fontsize=7.5, loc="center left", bbox_to_anchor=(1.02, 0.5),
                    framealpha=0.95, borderaxespad=0)
-    fig.suptitle("F2  Clean scale grid (4 scales x 3 fractions x 3 seeds) with the tuple-head band",
+    fig.suptitle("F2  Clean scale grid (4 scales x 3 fractions x 3 seeds) with the Head-Policy band",
                  fontsize=11.5)
     caption(fig, 
-             "Band is f100 only and has no fraction sweep. No 60M-vs-23M scale effect is "
-             "annotated under the head: its direction flips across seeds.",)
+             "Head-Policy bands are f100 only and have no fraction sweep. No 60M-vs-23M scale "
+             "effect is annotated under the head: its direction flips across seeds.",)
     fig.tight_layout()
     fig.savefig(outdir / f"F2_scale_grid.{fmt}", bbox_inches="tight", dpi=200)
     plt.close(fig)
@@ -130,17 +133,17 @@ def figure_f3(outdir: Path, fmt: str) -> None:
     """2x2 decomposition with 95% CI from the three seed-level paired deltas."""
     fam = family_seed_values()
     contrasts = [
-        ("C2a\ndata alignment\n(A2 - A1)", "A1_gen23", "A2_policy23"),
-        ("C2b\noutput structure\n(B2 - A2)", "A2_policy23", "B2_head23"),
-        ("C2c\ncomposite\n(B2 - A1)", "A1_gen23", "B2_head23"),
-        ("C1\nreformulation vs scale\n(B2 - gen60)", "gen60", "B2_head23"),
+        ("C2a\ndata alignment\nGen-Policy \u2212 Gen-Full", "A1_gen23", "A2_policy23"),
+        ("C2b\noutput structure\nHead-Policy \u2212 Gen-Policy", "A2_policy23", "B2_head23"),
+        ("C2c\ncomposite\nHead-Policy \u2212 Gen-Full", "A1_gen23", "B2_head23"),
+        ("C1\nreformulation vs scale\nHead-Policy \u2212 Gen-Full 60M", "gen60", "B2_head23"),
     ]
     # adoption verdicts from the row-level test output
     w1 = json.loads((REPO / "results/row_level_results.json").read_text(encoding="utf-8"))
     adopted = {(k.split("_")[0], k.split("_")[1]): v["adopted"]
                for k, v in w1["clean"]["primary"].items()}
 
-    fig, axes = plt.subplots(1, 2, figsize=(11, 4.6))
+    fig, axes = plt.subplots(1, 2, figsize=(13.5, 5.2))
     for ax, metric in zip(axes, ("strict", "coarse")):
         labels, means, errs, hatches, colors = [], [], [], [], []
         for label, base, treat in contrasts:
@@ -167,7 +170,7 @@ def figure_f3(outdir: Path, fmt: str) -> None:
                         fontsize=8, color="#333333", fontweight="bold")
         ax.axhline(0, color="black", lw=0.8)
         ax.set_xticks(range(len(labels)))
-        ax.set_xticklabels(labels, fontsize=7.5)
+        ax.set_xticklabels(labels, fontsize=7.0, linespacing=1.35)
         ax.set_ylabel("delta (pp)")
         ax.set_title(metric, fontsize=11)
         ax.grid(axis="y", alpha=0.25, lw=0.6)
@@ -178,8 +181,8 @@ def figure_f3(outdir: Path, fmt: str) -> None:
     ], fontsize=7.5, loc="upper left")
     fig.suptitle("F3  2x2 decomposition, clean backbone (error bars: 95% CI over 3 seeds)",
                  fontsize=11.5)
-    caption(fig, 
-             "Error bars are SEED-level (n=3, t(0.975,df=2)=4.303) and are wide by construction; "
+    caption(fig, y=-0.13,
+             text="Error bars are SEED-level (n=3, t(0.975,df=2)=4.303) and are wide by construction; "
              "adoption is the ROW-level verdict (exact McNemar -> Stouffer -> Holm, m=8), which "
              "is far better powered. A wide CI beside an adopted bar is the power finding, not a "
              "contradiction. C2b strict clears Holm at p=2.09e-3 but is rejected on seed-sign "
@@ -275,7 +278,7 @@ def figure_f5(outdir: Path, fmt: str) -> None:
     caption(fig, 
              "Descriptive only — no variance-reduction claim is made. Note the spread "
              "collapses for the 23M head but NOT for the 60M head, whose SD exceeds "
-             "A1's on both metrics; any stability statement must name the 23M head.",)
+             "Gen-Full 23M's on both metrics; any stability statement must name the 23M head.",)
     fig.tight_layout()
     fig.savefig(outdir / f"F5_seed_stability.{fmt}", bbox_inches="tight", dpi=200)
     plt.close(fig)
