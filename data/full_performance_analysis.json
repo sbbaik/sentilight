@@ -1,0 +1,1896 @@
+{
+  "base_dir": "/home/sbbaik/344_SmartBulb_coding/sentilight_llm_resumable",
+  "adapter_dir": "/home/sbbaik/344_SmartBulb_coding/sentilight_llm_resumable/qwen_kote_lora",
+  "base_model_name": "Qwen/Qwen2.5-0.5B-Instruct",
+  "train_jsonl": "/home/sbbaik/344_SmartBulb_coding/sentilight_llm_resumable/train_kote.jsonl",
+  "val_jsonl": "/home/sbbaik/344_SmartBulb_coding/sentilight_llm_resumable/val_kote.jsonl",
+  "test_jsonl": "/home/sbbaik/344_SmartBulb_coding/sentilight_llm_resumable/test_kote.jsonl",
+  "sample_ratio": 1.0,
+  "seed": 42,
+  "max_new_tokens": 64,
+  "prompt_max_len": 384,
+  "train": {
+    "split_name": "train",
+    "num_samples": 36000,
+    "sample_ratio_used": 1.0,
+    "parse_success_rate_pct": 99.9972,
+    "invalid_json_rate_pct": 0.0028,
+    "ct_warm_cool_threshold": 325,
+    "ct_warm_cool_accuracy_pct": 72.0306,
+    "mae": {
+      "h_circular": 47.3518,
+      "s": 14.5143,
+      "b": 10.4269,
+      "dimmer": 11.5232,
+      "ct": 51.8271
+    },
+    "median_error": {
+      "h_circular": 25.0,
+      "s": 10.0,
+      "b": 10.0,
+      "dimmer": 10.0,
+      "ct": 30.0
+    },
+    "p90_error": {
+      "h_circular": 130.0,
+      "s": 40.0,
+      "b": 25.0,
+      "dimmer": 25.0,
+      "ct": 140.0
+    },
+    "exact_accuracy_pct": {
+      "h": 21.5694,
+      "s": 22.7056,
+      "b": 24.75,
+      "dimmer": 18.3306,
+      "ct": 21.3333,
+      "all_5_exact": 0.9972
+    },
+    "tolerance_accuracy_pct": {
+      "h": {
+        "pm10": 36.2417,
+        "pm20": 49.7083,
+        "pm30": 55.1083
+      },
+      "s": {
+        "pm10": 62.4722,
+        "pm20": 80.9111,
+        "pm30": 88.8056
+      },
+      "b": {
+        "pm10": 71.7944,
+        "pm20": 89.5583,
+        "pm30": 96.0722
+      },
+      "dimmer": {
+        "pm10": 65.4556,
+        "pm20": 86.2694,
+        "pm30": 94.2306
+      },
+      "ct": {
+        "pm10": 27.2278,
+        "pm20": 40.5806,
+        "pm30": 55.1361
+      },
+      "all_5_joint": {
+        "pm10": 9.9194,
+        "pm20": 23.8,
+        "pm30": 37.0889
+      }
+    },
+    "summary_score": {
+      "parse_success_rate_pct": 99.9972,
+      "ct_warm_cool_accuracy_pct": 72.0306,
+      "joint_pm20_accuracy_pct": 23.8,
+      "joint_pm30_accuracy_pct": 37.0889,
+      "macro_mae_simple_avg": 27.1287
+    },
+    "best_examples": [
+      {
+        "input": "친구들과 선생님들 다보는앞에서 견딜 수 없는 수치심... 억울함... 대학걱정... 그 나이땐 그럴 수 있다. 지나고보면 아무것도아니지만 그나이땐 그게 전부 인 것 같고 세상이 무너지는 것 같고. 내가 죽으면 아니라는게 증명될까싶지ㅠㅠ",
+        "ground_truth": {
+          "h": 230,
+          "s": 70,
+          "b": 30,
+          "dimmer": 25,
+          "ct": 450
+        },
+        "prediction": {
+          "h": 230,
+          "s": 70,
+          "b": 30,
+          "dimmer": 25,
+          "ct": 450
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 230, \"s\": 70, \"b\": 30, \"dimmer\": 25, \"ct\": 450}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "결국 오퍼레이션 트위스트를 한건가요?",
+        "ground_truth": {
+          "h": 200,
+          "s": 20,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "prediction": {
+          "h": 200,
+          "s": 20,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 200, \"s\": 20, \"b\": 60, \"dimmer\": 50, \"ct\": 350}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "저도 개명했는데~~지율님 많이 불러드려야겠네요^^미소가 넘 상콤해요",
+        "ground_truth": {
+          "h": 330,
+          "s": 80,
+          "b": 90,
+          "dimmer": 85,
+          "ct": 280
+        },
+        "prediction": {
+          "h": 330,
+          "s": 80,
+          "b": 90,
+          "dimmer": 85,
+          "ct": 280
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 330, \"s\": 80, \"b\": 90, \"dimmer\": 85, \"ct\": 280}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "배송은 빨리왔고요. 입어보니 좀 작네요. 지금 6개월인데 약간 껴요. 얇아서 원피스나 롱셔츠 안에 입으면 될것같아요.",
+        "ground_truth": {
+          "h": 220,
+          "s": 30,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "prediction": {
+          "h": 220,
+          "s": 30,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 220, \"s\": 30, \"b\": 60, \"dimmer\": 50, \"ct\": 350}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "이거보니 갑자기 궁금한게 생겼는데메인보드에 2.5인치 SSD sata로 연결하는거 보다외장케이스사서 USB3.0으로 연결하는게 속도가 더 빠르다던데 그게 맞나요?",
+        "ground_truth": {
+          "h": 200,
+          "s": 20,
+          "b": 70,
+          "dimmer": 60,
+          "ct": 350
+        },
+        "prediction": {
+          "h": 200,
+          "s": 20,
+          "b": 70,
+          "dimmer": 60,
+          "ct": 350
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 200, \"s\": 20, \"b\": 70, \"dimmer\": 60, \"ct\": 350}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "뭉가 야 북으로 가서 돼지 항무니나 빨고살어",
+        "ground_truth": {
+          "h": 10,
+          "s": 90,
+          "b": 50,
+          "dimmer": 40,
+          "ct": 200
+        },
+        "prediction": {
+          "h": 10,
+          "s": 90,
+          "b": 50,
+          "dimmer": 40,
+          "ct": 200
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 10, \"s\": 90, \"b\": 50, \"dimmer\": 40, \"ct\": 200}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "= 705덬 748덬 아 그렇구만...저 첫 댓만 찾아봤네..",
+        "ground_truth": {
+          "h": 200,
+          "s": 20,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "prediction": {
+          "h": 200,
+          "s": 20,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 200, \"s\": 20, \"b\": 60, \"dimmer\": 50, \"ct\": 350}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "생리가 시작하기 2-3일 전부터 ibuprofen 을 먹어주시면 anti-inflammatory 효과가 있는 NSAID 라서 통증이 덜할겁니다. 200mg로 먹으라고 하는데 사실 위장이 크게 약하지않은 편이라면 800mg 까지는 먹어도 괜찮습니다;; 타이레놀은 많이 먹으면 간에 큰 위험이 있으니 그냥 비슷한거라고 딴거 드시지말고 NSAID 종류 복용하세요.",
+        "ground_truth": {
+          "h": 200,
+          "s": 30,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "prediction": {
+          "h": 200,
+          "s": 30,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 200, \"s\": 30, \"b\": 60, \"dimmer\": 50, \"ct\": 350}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "암욜맨은 ㄹㅇ 콘서트 직캠 풀어준 개 레전드인데... 장우영 실크 사랑해...",
+        "ground_truth": {
+          "h": 330,
+          "s": 80,
+          "b": 90,
+          "dimmer": 85,
+          "ct": 250
+        },
+        "prediction": {
+          "h": 330,
+          "s": 80,
+          "b": 90,
+          "dimmer": 85,
+          "ct": 250
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 330, \"s\": 80, \"b\": 90, \"dimmer\": 85, \"ct\": 250}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "꾜푸로님 점점더 매력덩어리가 되어가시는데욯ㅎ",
+        "ground_truth": {
+          "h": 330,
+          "s": 80,
+          "b": 90,
+          "dimmer": 85,
+          "ct": 280
+        },
+        "prediction": {
+          "h": 330,
+          "s": 80,
+          "b": 90,
+          "dimmer": 85,
+          "ct": 280
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 330, \"s\": 80, \"b\": 90, \"dimmer\": 85, \"ct\": 280}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      }
+    ],
+    "worst_examples": [
+      {
+        "input": "삼촌만 흑백이얔ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
+        "ground_truth": {
+          "h": 240,
+          "s": 10,
+          "b": 30,
+          "dimmer": 30,
+          "ct": 450
+        },
+        "prediction": {
+          "h": 30,
+          "s": 90,
+          "b": 90,
+          "dimmer": 85,
+          "ct": 220
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 30, \"s\": 90, \"b\": 90, \"dimmer\": 85, \"ct\": 220}",
+        "errors": {
+          "h_circular": 150,
+          "s": 80,
+          "b": 60,
+          "dimmer": 55,
+          "ct": 230,
+          "total_error_score": 575
+        }
+      },
+      {
+        "input": "이쯤되니 다음 컴백 기록이 무서워짐.......",
+        "ground_truth": {
+          "h": 40,
+          "s": 80,
+          "b": 95,
+          "dimmer": 95,
+          "ct": 220
+        },
+        "prediction": {
+          "h": 240,
+          "s": 30,
+          "b": 30,
+          "dimmer": 25,
+          "ct": 450
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 240, \"s\": 30, \"b\": 30, \"dimmer\": 25, \"ct\": 450}",
+        "errors": {
+          "h_circular": 160,
+          "s": 50,
+          "b": 65,
+          "dimmer": 70,
+          "ct": 230,
+          "total_error_score": 575
+        }
+      },
+      {
+        "input": "다행이다~ 나만 그러나? 하고 뻘쭘햇데이~ 나는 정말로 무지무지 먹고싶어 진짜로~ 1",
+        "ground_truth": {
+          "h": 60,
+          "s": 85,
+          "b": 90,
+          "dimmer": 85,
+          "ct": 220
+        },
+        "prediction": {
+          "h": 240,
+          "s": 50,
+          "b": 30,
+          "dimmer": 25,
+          "ct": 450
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 240, \"s\": 50, \"b\": 30, \"dimmer\": 25, \"ct\": 450}",
+        "errors": {
+          "h_circular": 180,
+          "s": 35,
+          "b": 60,
+          "dimmer": 60,
+          "ct": 230,
+          "total_error_score": 565
+        }
+      },
+      {
+        "input": "대나무 폭탄이나 발리스타 12마리 이런거 뜨면 그냥 포기...",
+        "ground_truth": {
+          "h": 180,
+          "s": 15,
+          "b": 25,
+          "dimmer": 20,
+          "ct": 490
+        },
+        "prediction": {
+          "h": 10,
+          "s": 90,
+          "b": 40,
+          "dimmer": 30,
+          "ct": 200
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 10, \"s\": 90, \"b\": 40, \"dimmer\": 30, \"ct\": 200}",
+        "errors": {
+          "h_circular": 170,
+          "s": 75,
+          "b": 15,
+          "dimmer": 10,
+          "ct": 290,
+          "total_error_score": 560
+        }
+      },
+      {
+        "input": "아이고메 눈 침침하다",
+        "ground_truth": {
+          "h": 200,
+          "s": 10,
+          "b": 30,
+          "dimmer": 25,
+          "ct": 480
+        },
+        "prediction": {
+          "h": 330,
+          "s": 80,
+          "b": 90,
+          "dimmer": 85,
+          "ct": 250
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 330, \"s\": 80, \"b\": 90, \"dimmer\": 85, \"ct\": 250}",
+        "errors": {
+          "h_circular": 130,
+          "s": 70,
+          "b": 60,
+          "dimmer": 60,
+          "ct": 230,
+          "total_error_score": 550
+        }
+      },
+      {
+        "input": "222덬 미쳤다 쩐다 가슴이 뻐렁친다",
+        "ground_truth": {
+          "h": 20,
+          "s": 100,
+          "b": 95,
+          "dimmer": 90,
+          "ct": 210
+        },
+        "prediction": {
+          "h": 230,
+          "s": 60,
+          "b": 40,
+          "dimmer": 30,
+          "ct": 450
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 230, \"s\": 60, \"b\": 40, \"dimmer\": 30, \"ct\": 450}",
+        "errors": {
+          "h_circular": 150,
+          "s": 40,
+          "b": 55,
+          "dimmer": 60,
+          "ct": 240,
+          "total_error_score": 545
+        }
+      },
+      {
+        "input": "죽으라는놈은안죽고 보탬이 되는분들은 한분씩 일찍들 돌아가시니삼가고인의명복을 빕니다",
+        "ground_truth": {
+          "h": 220,
+          "s": 50,
+          "b": 25,
+          "dimmer": 15,
+          "ct": 500
+        },
+        "prediction": {
+          "h": 10,
+          "s": 90,
+          "b": 50,
+          "dimmer": 40,
+          "ct": 200
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 10, \"s\": 90, \"b\": 50, \"dimmer\": 40, \"ct\": 200}",
+        "errors": {
+          "h_circular": 150,
+          "s": 40,
+          "b": 25,
+          "dimmer": 25,
+          "ct": 300,
+          "total_error_score": 540
+        }
+      },
+      {
+        "input": "진부한 스토리진짜 아래 댓글처럼내가 꾼 꿈이 더 재밌겠다ㅋㅋ",
+        "ground_truth": {
+          "h": 250,
+          "s": 50,
+          "b": 30,
+          "dimmer": 25,
+          "ct": 480
+        },
+        "prediction": {
+          "h": 50,
+          "s": 80,
+          "b": 90,
+          "dimmer": 85,
+          "ct": 250
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 50, \"s\": 80, \"b\": 90, \"dimmer\": 85, \"ct\": 250}",
+        "errors": {
+          "h_circular": 160,
+          "s": 30,
+          "b": 60,
+          "dimmer": 60,
+          "ct": 230,
+          "total_error_score": 540
+        }
+      },
+      {
+        "input": "워매...먼일이어라....",
+        "ground_truth": {
+          "h": 200,
+          "s": 30,
+          "b": 40,
+          "dimmer": 35,
+          "ct": 450
+        },
+        "prediction": {
+          "h": 30,
+          "s": 90,
+          "b": 70,
+          "dimmer": 60,
+          "ct": 200
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 30, \"s\": 90, \"b\": 70, \"dimmer\": 60, \"ct\": 200}",
+        "errors": {
+          "h_circular": 170,
+          "s": 60,
+          "b": 30,
+          "dimmer": 25,
+          "ct": 250,
+          "total_error_score": 535
+        }
+      },
+      {
+        "input": "둘다 10킬로 이상씩 넘게 찌면  끊게됨 .",
+        "ground_truth": {
+          "h": 220,
+          "s": 20,
+          "b": 40,
+          "dimmer": 35,
+          "ct": 450
+        },
+        "prediction": {
+          "h": 20,
+          "s": 90,
+          "b": 70,
+          "dimmer": 60,
+          "ct": 200
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 20, \"s\": 90, \"b\": 70, \"dimmer\": 60, \"ct\": 200}",
+        "errors": {
+          "h_circular": 160,
+          "s": 70,
+          "b": 30,
+          "dimmer": 25,
+          "ct": 250,
+          "total_error_score": 535
+        }
+      }
+    ]
+  },
+  "validation": {
+    "split_name": "val",
+    "num_samples": 2000,
+    "sample_ratio_used": 1.0,
+    "parse_success_rate_pct": 100.0,
+    "invalid_json_rate_pct": 0.0,
+    "ct_warm_cool_threshold": 325,
+    "ct_warm_cool_accuracy_pct": 69.9,
+    "mae": {
+      "h_circular": 48.555,
+      "s": 14.8025,
+      "b": 10.8215,
+      "dimmer": 11.8935,
+      "ct": 53.35
+    },
+    "median_error": {
+      "h_circular": 30.0,
+      "s": 10.0,
+      "b": 10.0,
+      "dimmer": 10.0,
+      "ct": 30.0
+    },
+    "p90_error": {
+      "h_circular": 130.0,
+      "s": 40.0,
+      "b": 25.0,
+      "dimmer": 25.0,
+      "ct": 150.0
+    },
+    "exact_accuracy_pct": {
+      "h": 20.55,
+      "s": 22.0,
+      "b": 24.2,
+      "dimmer": 17.5,
+      "ct": 20.95,
+      "all_5_exact": 1.15
+    },
+    "tolerance_accuracy_pct": {
+      "h": {
+        "pm10": 34.45,
+        "pm20": 48.75,
+        "pm30": 53.55
+      },
+      "s": {
+        "pm10": 63.1,
+        "pm20": 80.2,
+        "pm30": 88.0
+      },
+      "b": {
+        "pm10": 70.15,
+        "pm20": 88.75,
+        "pm30": 95.85
+      },
+      "dimmer": {
+        "pm10": 63.8,
+        "pm20": 86.0,
+        "pm30": 93.9
+      },
+      "ct": {
+        "pm10": 27.3,
+        "pm20": 40.35,
+        "pm30": 54.6
+      },
+      "all_5_joint": {
+        "pm10": 9.6,
+        "pm20": 23.45,
+        "pm30": 35.45
+      }
+    },
+    "summary_score": {
+      "parse_success_rate_pct": 100.0,
+      "ct_warm_cool_accuracy_pct": 69.9,
+      "joint_pm20_accuracy_pct": 23.45,
+      "joint_pm30_accuracy_pct": 35.45,
+      "macro_mae_simple_avg": 27.8845
+    },
+    "best_examples": [
+      {
+        "input": "전혀 안들립니다.쓰지 못할것 같네요ㅜ",
+        "ground_truth": {
+          "h": 230,
+          "s": 20,
+          "b": 30,
+          "dimmer": 25,
+          "ct": 450
+        },
+        "prediction": {
+          "h": 230,
+          "s": 20,
+          "b": 30,
+          "dimmer": 25,
+          "ct": 450
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 230, \"s\": 20, \"b\": 30, \"dimmer\": 25, \"ct\": 450}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "헐 지금 저녁....?",
+        "ground_truth": {
+          "h": 200,
+          "s": 20,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "prediction": {
+          "h": 200,
+          "s": 20,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 200, \"s\": 20, \"b\": 60, \"dimmer\": 50, \"ct\": 350}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "내가 저런 증상이 몇년전 부터 있었는데",
+        "ground_truth": {
+          "h": 220,
+          "s": 30,
+          "b": 50,
+          "dimmer": 45,
+          "ct": 380
+        },
+        "prediction": {
+          "h": 220,
+          "s": 30,
+          "b": 50,
+          "dimmer": 45,
+          "ct": 380
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 220, \"s\": 30, \"b\": 50, \"dimmer\": 45, \"ct\": 380}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "잠시 여기서 멈춰서서 뒤를 돌아보도록 하지요. 어떠십니까? 어제의 당신보다 오늘의 당신이 조금 더 나은 느낌이 드십니까? 작년의 당신보다 올해의 당신이 그래도 뭔가 조금 더 할 수 있는 것이 늘어난 기분이십니까?1",
+        "ground_truth": {
+          "h": 200,
+          "s": 30,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "prediction": {
+          "h": 200,
+          "s": 30,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 200, \"s\": 30, \"b\": 60, \"dimmer\": 50, \"ct\": 350}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "진짜 갈 수 있는 사람들이 부럽다...ㅜㅜㅜㅜ",
+        "ground_truth": {
+          "h": 230,
+          "s": 60,
+          "b": 40,
+          "dimmer": 30,
+          "ct": 450
+        },
+        "prediction": {
+          "h": 230,
+          "s": 60,
+          "b": 40,
+          "dimmer": 30,
+          "ct": 450
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 230, \"s\": 60, \"b\": 40, \"dimmer\": 30, \"ct\": 450}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "갔다가 상품권에 낚여서 쉔무3 디럭스 만원에 삼 ㅋ",
+        "ground_truth": {
+          "h": 50,
+          "s": 80,
+          "b": 90,
+          "dimmer": 85,
+          "ct": 250
+        },
+        "prediction": {
+          "h": 50,
+          "s": 80,
+          "b": 90,
+          "dimmer": 85,
+          "ct": 250
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 50, \"s\": 80, \"b\": 90, \"dimmer\": 85, \"ct\": 250}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "고양이가 그렇게이쁘면 자기집에서키워라 밥으로꼬셔서 이뻐만할줄알지 책임은질줄모르는 아저씨네. 극혐",
+        "ground_truth": {
+          "h": 340,
+          "s": 90,
+          "b": 40,
+          "dimmer": 30,
+          "ct": 200
+        },
+        "prediction": {
+          "h": 340,
+          "s": 90,
+          "b": 40,
+          "dimmer": 30,
+          "ct": 200
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 340, \"s\": 90, \"b\": 40, \"dimmer\": 30, \"ct\": 200}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "좀 지나면 마실거에요",
+        "ground_truth": {
+          "h": 200,
+          "s": 20,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "prediction": {
+          "h": 200,
+          "s": 20,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 200, \"s\": 20, \"b\": 60, \"dimmer\": 50, \"ct\": 350}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "이곳은 영업하시는 분들이 그득하셔서...",
+        "ground_truth": {
+          "h": 200,
+          "s": 20,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "prediction": {
+          "h": 200,
+          "s": 20,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 200, \"s\": 20, \"b\": 60, \"dimmer\": 50, \"ct\": 350}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "공무원은 그냥 철밥통이라 좋은거기때무네...월급이나 월급에 비해 힘든일때문에 막상 합격하고 탈주하는 애들도 많더라",
+        "ground_truth": {
+          "h": 220,
+          "s": 30,
+          "b": 50,
+          "dimmer": 45,
+          "ct": 350
+        },
+        "prediction": {
+          "h": 220,
+          "s": 30,
+          "b": 50,
+          "dimmer": 45,
+          "ct": 350
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 220, \"s\": 30, \"b\": 50, \"dimmer\": 45, \"ct\": 350}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      }
+    ],
+    "worst_examples": [
+      {
+        "input": "아..기엽다..아..",
+        "ground_truth": {
+          "h": 345,
+          "s": 95,
+          "b": 90,
+          "dimmer": 80,
+          "ct": 240
+        },
+        "prediction": {
+          "h": 230,
+          "s": 20,
+          "b": 40,
+          "dimmer": 35,
+          "ct": 450
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 230, \"s\": 20, \"b\": 40, \"dimmer\": 35, \"ct\": 450}",
+        "errors": {
+          "h_circular": 115,
+          "s": 75,
+          "b": 50,
+          "dimmer": 45,
+          "ct": 210,
+          "total_error_score": 495
+        }
+      },
+      {
+        "input": "자, 이제 자살자의 50%가 군인이라는 계산을 보여주시죠",
+        "ground_truth": {
+          "h": 240,
+          "s": 30,
+          "b": 30,
+          "dimmer": 25,
+          "ct": 480
+        },
+        "prediction": {
+          "h": 10,
+          "s": 90,
+          "b": 40,
+          "dimmer": 30,
+          "ct": 200
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 10, \"s\": 90, \"b\": 40, \"dimmer\": 30, \"ct\": 200}",
+        "errors": {
+          "h_circular": 130,
+          "s": 60,
+          "b": 10,
+          "dimmer": 5,
+          "ct": 280,
+          "total_error_score": 485
+        }
+      },
+      {
+        "input": "평택항에서 죽은 애는 생각이라도 하나??",
+        "ground_truth": {
+          "h": 220,
+          "s": 60,
+          "b": 30,
+          "dimmer": 20,
+          "ct": 480
+        },
+        "prediction": {
+          "h": 15,
+          "s": 90,
+          "b": 40,
+          "dimmer": 30,
+          "ct": 200
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 15, \"s\": 90, \"b\": 40, \"dimmer\": 30, \"ct\": 200}",
+        "errors": {
+          "h_circular": 155,
+          "s": 30,
+          "b": 10,
+          "dimmer": 10,
+          "ct": 280,
+          "total_error_score": 485
+        }
+      },
+      {
+        "input": "ㅋ큐ㅠㅡㅡㅠㅡㅡㅡㅠㅜㅜㅠ",
+        "ground_truth": {
+          "h": 240,
+          "s": 50,
+          "b": 30,
+          "dimmer": 25,
+          "ct": 480
+        },
+        "prediction": {
+          "h": 330,
+          "s": 90,
+          "b": 90,
+          "dimmer": 85,
+          "ct": 250
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 330, \"s\": 90, \"b\": 90, \"dimmer\": 85, \"ct\": 250}",
+        "errors": {
+          "h_circular": 90,
+          "s": 40,
+          "b": 60,
+          "dimmer": 60,
+          "ct": 230,
+          "total_error_score": 480
+        }
+      },
+      {
+        "input": "많이어지럽고 속안좋고 탈진임",
+        "ground_truth": {
+          "h": 240,
+          "s": 75,
+          "b": 25,
+          "dimmer": 20,
+          "ct": 480
+        },
+        "prediction": {
+          "h": 340,
+          "s": 90,
+          "b": 90,
+          "dimmer": 85,
+          "ct": 250
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 340, \"s\": 90, \"b\": 90, \"dimmer\": 85, \"ct\": 250}",
+        "errors": {
+          "h_circular": 100,
+          "s": 15,
+          "b": 65,
+          "dimmer": 65,
+          "ct": 230,
+          "total_error_score": 475
+        }
+      },
+      {
+        "input": "오늘부로 농협통장 없애고 NH농협카드 다 짜른다.",
+        "ground_truth": {
+          "h": 0,
+          "s": 90,
+          "b": 50,
+          "dimmer": 30,
+          "ct": 180
+        },
+        "prediction": {
+          "h": 180,
+          "s": 20,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 180, \"s\": 20, \"b\": 60, \"dimmer\": 50, \"ct\": 350}",
+        "errors": {
+          "h_circular": 180,
+          "s": 70,
+          "b": 10,
+          "dimmer": 20,
+          "ct": 170,
+          "total_error_score": 450
+        }
+      },
+      {
+        "input": "최악.... 전편보고 너무기대했나... 울버린형님 실망임다ㅠㅠ 일본싸구려액션영화일뿐...",
+        "ground_truth": {
+          "h": 30,
+          "s": 80,
+          "b": 50,
+          "dimmer": 40,
+          "ct": 200
+        },
+        "prediction": {
+          "h": 240,
+          "s": 70,
+          "b": 30,
+          "dimmer": 25,
+          "ct": 450
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 240, \"s\": 70, \"b\": 30, \"dimmer\": 25, \"ct\": 450}",
+        "errors": {
+          "h_circular": 150,
+          "s": 10,
+          "b": 20,
+          "dimmer": 15,
+          "ct": 250,
+          "total_error_score": 445
+        }
+      },
+      {
+        "input": "얼굴은 잘생겼는데 몸을키워야겠는데?",
+        "ground_truth": {
+          "h": 40,
+          "s": 75,
+          "b": 80,
+          "dimmer": 75,
+          "ct": 220
+        },
+        "prediction": {
+          "h": 200,
+          "s": 20,
+          "b": 50,
+          "dimmer": 45,
+          "ct": 380
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 200, \"s\": 20, \"b\": 50, \"dimmer\": 45, \"ct\": 380}",
+        "errors": {
+          "h_circular": 160,
+          "s": 55,
+          "b": 30,
+          "dimmer": 30,
+          "ct": 160,
+          "total_error_score": 435
+        }
+      },
+      {
+        "input": "옥션 올킬 통영 제철 모듬회 50프로 할인 가격 좋네요제철 모듬회면 안 먹을수가 없죠",
+        "ground_truth": {
+          "h": 50,
+          "s": 95,
+          "b": 95,
+          "dimmer": 90,
+          "ct": 220
+        },
+        "prediction": {
+          "h": 200,
+          "s": 20,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 200, \"s\": 20, \"b\": 60, \"dimmer\": 50, \"ct\": 350}",
+        "errors": {
+          "h_circular": 150,
+          "s": 75,
+          "b": 35,
+          "dimmer": 40,
+          "ct": 130,
+          "total_error_score": 430
+        }
+      },
+      {
+        "input": "아............230 잃고도 속쓰려 죽겠는데.....멘탈이 존경스럽니다. ㄷㄷㄷㄷ",
+        "ground_truth": {
+          "h": 240,
+          "s": 60,
+          "b": 30,
+          "dimmer": 25,
+          "ct": 450
+        },
+        "prediction": {
+          "h": 330,
+          "s": 80,
+          "b": 90,
+          "dimmer": 85,
+          "ct": 250
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 330, \"s\": 80, \"b\": 90, \"dimmer\": 85, \"ct\": 250}",
+        "errors": {
+          "h_circular": 90,
+          "s": 20,
+          "b": 60,
+          "dimmer": 60,
+          "ct": 200,
+          "total_error_score": 430
+        }
+      }
+    ]
+  },
+  "test": {
+    "split_name": "test",
+    "num_samples": 2000,
+    "sample_ratio_used": 1.0,
+    "parse_success_rate_pct": 100.0,
+    "invalid_json_rate_pct": 0.0,
+    "ct_warm_cool_threshold": 325,
+    "ct_warm_cool_accuracy_pct": 70.65,
+    "mae": {
+      "h_circular": 48.23,
+      "s": 14.9615,
+      "b": 10.7,
+      "dimmer": 11.7605,
+      "ct": 53.9935
+    },
+    "median_error": {
+      "h_circular": 20.0,
+      "s": 10.0,
+      "b": 10.0,
+      "dimmer": 10.0,
+      "ct": 30.0
+    },
+    "p90_error": {
+      "h_circular": 130.0,
+      "s": 40.0,
+      "b": 25.0,
+      "dimmer": 25.0,
+      "ct": 150.0
+    },
+    "exact_accuracy_pct": {
+      "h": 21.1,
+      "s": 21.2,
+      "b": 24.85,
+      "dimmer": 17.45,
+      "ct": 22.0,
+      "all_5_exact": 1.2
+    },
+    "tolerance_accuracy_pct": {
+      "h": {
+        "pm10": 35.35,
+        "pm20": 50.05,
+        "pm30": 54.35
+      },
+      "s": {
+        "pm10": 61.25,
+        "pm20": 80.8,
+        "pm30": 88.55
+      },
+      "b": {
+        "pm10": 70.9,
+        "pm20": 88.7,
+        "pm30": 95.45
+      },
+      "dimmer": {
+        "pm10": 65.65,
+        "pm20": 85.9,
+        "pm30": 93.7
+      },
+      "ct": {
+        "pm10": 27.3,
+        "pm20": 39.7,
+        "pm30": 53.7
+      },
+      "all_5_joint": {
+        "pm10": 10.4,
+        "pm20": 24.15,
+        "pm30": 36.0
+      }
+    },
+    "summary_score": {
+      "parse_success_rate_pct": 100.0,
+      "ct_warm_cool_accuracy_pct": 70.65,
+      "joint_pm20_accuracy_pct": 24.15,
+      "joint_pm30_accuracy_pct": 36.0,
+      "macro_mae_simple_avg": 27.9291
+    },
+    "best_examples": [
+      {
+        "input": "최은우님너무나도아름답습니다",
+        "ground_truth": {
+          "h": 330,
+          "s": 80,
+          "b": 90,
+          "dimmer": 85,
+          "ct": 280
+        },
+        "prediction": {
+          "h": 330,
+          "s": 80,
+          "b": 90,
+          "dimmer": 85,
+          "ct": 280
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 330, \"s\": 80, \"b\": 90, \"dimmer\": 85, \"ct\": 280}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "인친님이 어머니의 센스를 쏙 빼닮았나봐요",
+        "ground_truth": {
+          "h": 330,
+          "s": 70,
+          "b": 80,
+          "dimmer": 75,
+          "ct": 280
+        },
+        "prediction": {
+          "h": 330,
+          "s": 70,
+          "b": 80,
+          "dimmer": 75,
+          "ct": 280
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 330, \"s\": 70, \"b\": 80, \"dimmer\": 75, \"ct\": 280}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "으어  라메르 발라줘여...",
+        "ground_truth": {
+          "h": 340,
+          "s": 80,
+          "b": 90,
+          "dimmer": 85,
+          "ct": 250
+        },
+        "prediction": {
+          "h": 340,
+          "s": 80,
+          "b": 90,
+          "dimmer": 85,
+          "ct": 250
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 340, \"s\": 80, \"b\": 90, \"dimmer\": 85, \"ct\": 250}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "살까말까 고민했던 제품인데 잘산거같아요~ 이유식 만들면서 필요할꺼같아시 구매했고요~~ 귀엽고 깔끔해요! 유용하게 쓸듯합니다~~ 배송도 하루걸려왔어요 ㅎ",
+        "ground_truth": {
+          "h": 330,
+          "s": 70,
+          "b": 85,
+          "dimmer": 80,
+          "ct": 280
+        },
+        "prediction": {
+          "h": 330,
+          "s": 70,
+          "b": 85,
+          "dimmer": 80,
+          "ct": 280
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 330, \"s\": 70, \"b\": 85, \"dimmer\": 80, \"ct\": 280}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "홍기자님. 유익한 방송 잘 듣고 있습니다.",
+        "ground_truth": {
+          "h": 180,
+          "s": 20,
+          "b": 70,
+          "dimmer": 60,
+          "ct": 350
+        },
+        "prediction": {
+          "h": 180,
+          "s": 20,
+          "b": 70,
+          "dimmer": 60,
+          "ct": 350
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 180, \"s\": 20, \"b\": 70, \"dimmer\": 60, \"ct\": 350}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "기술적으로 분명한 가치가 있지만 가성비와 미관상으로 볼 때 이게 최선인가하는 생각이 드네요.",
+        "ground_truth": {
+          "h": 200,
+          "s": 30,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "prediction": {
+          "h": 200,
+          "s": 30,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 200, \"s\": 30, \"b\": 60, \"dimmer\": 50, \"ct\": 350}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "전 아직 30대인데요",
+        "ground_truth": {
+          "h": 200,
+          "s": 20,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "prediction": {
+          "h": 200,
+          "s": 20,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 200, \"s\": 20, \"b\": 60, \"dimmer\": 50, \"ct\": 350}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "대깨문들에게 아스트라제네카를 접종하자",
+        "ground_truth": {
+          "h": 10,
+          "s": 90,
+          "b": 50,
+          "dimmer": 40,
+          "ct": 200
+        },
+        "prediction": {
+          "h": 10,
+          "s": 90,
+          "b": 50,
+          "dimmer": 40,
+          "ct": 200
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 10, \"s\": 90, \"b\": 50, \"dimmer\": 40, \"ct\": 200}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "근데 목당이면 그래도 할만한 거 아님?",
+        "ground_truth": {
+          "h": 200,
+          "s": 20,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "prediction": {
+          "h": 200,
+          "s": 20,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 200, \"s\": 20, \"b\": 60, \"dimmer\": 50, \"ct\": 350}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      },
+      {
+        "input": "저색휘는 지옥에나 가라. 빨갱이 잡는 국정원이 무력화 되고 국정원 출신 고위직이 셀트리온 임원으로 가서 연봉 수백억 받고 셀트리온 서씨는 13조 우리나라 제일 갑부란다. k방역 운운하면서 백신도 질좋은 화이자 모더나는 패스하고 어디 듣보잡 백신을... 저넘 유사이래 한반도 통치자중 역대 최악의 쓰레기임",
+        "ground_truth": {
+          "h": 10,
+          "s": 90,
+          "b": 40,
+          "dimmer": 30,
+          "ct": 200
+        },
+        "prediction": {
+          "h": 10,
+          "s": 90,
+          "b": 40,
+          "dimmer": 30,
+          "ct": 200
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 10, \"s\": 90, \"b\": 40, \"dimmer\": 30, \"ct\": 200}",
+        "errors": {
+          "h_circular": 0,
+          "s": 0,
+          "b": 0,
+          "dimmer": 0,
+          "ct": 0,
+          "total_error_score": 0
+        }
+      }
+    ],
+    "worst_examples": [
+      {
+        "input": "케이블카 참사의 유일한, 마지막 생존자로군.",
+        "ground_truth": {
+          "h": 220,
+          "s": 15,
+          "b": 35,
+          "dimmer": 25,
+          "ct": 420
+        },
+        "prediction": {
+          "h": 20,
+          "s": 80,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 200
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 20, \"s\": 80, \"b\": 60, \"dimmer\": 50, \"ct\": 200}",
+        "errors": {
+          "h_circular": 160,
+          "s": 65,
+          "b": 25,
+          "dimmer": 25,
+          "ct": 220,
+          "total_error_score": 495
+        }
+      },
+      {
+        "input": "최악입니다.. 정 보구싶으면 비디오로 나옴 보시길...",
+        "ground_truth": {
+          "h": 240,
+          "s": 70,
+          "b": 25,
+          "dimmer": 20,
+          "ct": 480
+        },
+        "prediction": {
+          "h": 30,
+          "s": 90,
+          "b": 30,
+          "dimmer": 25,
+          "ct": 180
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 30, \"s\": 90, \"b\": 30, \"dimmer\": 25, \"ct\": 180}",
+        "errors": {
+          "h_circular": 150,
+          "s": 20,
+          "b": 5,
+          "dimmer": 5,
+          "ct": 300,
+          "total_error_score": 480
+        }
+      },
+      {
+        "input": "진짜  인젠 갈데없지 요자그마한 한국",
+        "ground_truth": {
+          "h": 240,
+          "s": 80,
+          "b": 20,
+          "dimmer": 20,
+          "ct": 480
+        },
+        "prediction": {
+          "h": 30,
+          "s": 90,
+          "b": 40,
+          "dimmer": 30,
+          "ct": 200
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 30, \"s\": 90, \"b\": 40, \"dimmer\": 30, \"ct\": 200}",
+        "errors": {
+          "h_circular": 150,
+          "s": 10,
+          "b": 20,
+          "dimmer": 10,
+          "ct": 280,
+          "total_error_score": 470
+        }
+      },
+      {
+        "input": "미쳤다이번영상....  침이 계속 넘어가져ㅠㅠㅠ허흐",
+        "ground_truth": {
+          "h": 345,
+          "s": 90,
+          "b": 85,
+          "dimmer": 80,
+          "ct": 230
+        },
+        "prediction": {
+          "h": 230,
+          "s": 70,
+          "b": 30,
+          "dimmer": 25,
+          "ct": 450
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 230, \"s\": 70, \"b\": 30, \"dimmer\": 25, \"ct\": 450}",
+        "errors": {
+          "h_circular": 115,
+          "s": 20,
+          "b": 55,
+          "dimmer": 55,
+          "ct": 220,
+          "total_error_score": 465
+        }
+      },
+      {
+        "input": "안성기 아저씨 생닭 먹는것만 기억나는 영화",
+        "ground_truth": {
+          "h": 200,
+          "s": 10,
+          "b": 50,
+          "dimmer": 50,
+          "ct": 400
+        },
+        "prediction": {
+          "h": 20,
+          "s": 80,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 200
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 20, \"s\": 80, \"b\": 60, \"dimmer\": 50, \"ct\": 200}",
+        "errors": {
+          "h_circular": 180,
+          "s": 70,
+          "b": 10,
+          "dimmer": 0,
+          "ct": 200,
+          "total_error_score": 460
+        }
+      },
+      {
+        "input": "윤석열에 대해 실망하고 배신감을 느꼈고 검찰제일주의로 무장한 그에게서 위협을 느꼈다",
+        "ground_truth": {
+          "h": 15,
+          "s": 90,
+          "b": 50,
+          "dimmer": 40,
+          "ct": 180
+        },
+        "prediction": {
+          "h": 240,
+          "s": 70,
+          "b": 30,
+          "dimmer": 25,
+          "ct": 450
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 240, \"s\": 70, \"b\": 30, \"dimmer\": 25, \"ct\": 450}",
+        "errors": {
+          "h_circular": 135,
+          "s": 20,
+          "b": 20,
+          "dimmer": 15,
+          "ct": 270,
+          "total_error_score": 460
+        }
+      },
+      {
+        "input": "아니 시바 이거 평점 9점 그냥 넘어야한다고 아놔!!! 아 아바타 그 쓰래기년만 없었으면 이거 날리는 건데....내 인생 최고의 눈물영화 중 탑임.하루종일 울었음.진짜 짱구극장판9기랑 삐까친다.내 맘 바뀌기 전에 가 <<< 와 이대사 폭풍눈물",
+        "ground_truth": {
+          "h": 355,
+          "s": 95,
+          "b": 75,
+          "dimmer": 65,
+          "ct": 220
+        },
+        "prediction": {
+          "h": 230,
+          "s": 80,
+          "b": 30,
+          "dimmer": 25,
+          "ct": 450
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 230, \"s\": 80, \"b\": 30, \"dimmer\": 25, \"ct\": 450}",
+        "errors": {
+          "h_circular": 125,
+          "s": 15,
+          "b": 45,
+          "dimmer": 40,
+          "ct": 230,
+          "total_error_score": 455
+        }
+      },
+      {
+        "input": "뉴시스 조수진  조선도  조수진   조수진세상  조쉬진  나라",
+        "ground_truth": {
+          "h": 180,
+          "s": 10,
+          "b": 50,
+          "dimmer": 40,
+          "ct": 400
+        },
+        "prediction": {
+          "h": 20,
+          "s": 80,
+          "b": 70,
+          "dimmer": 60,
+          "ct": 220
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 20, \"s\": 80, \"b\": 70, \"dimmer\": 60, \"ct\": 220}",
+        "errors": {
+          "h_circular": 160,
+          "s": 70,
+          "b": 20,
+          "dimmer": 20,
+          "ct": 180,
+          "total_error_score": 450
+        }
+      },
+      {
+        "input": "와 진짜 개학하고도 일주일만 이 머리 해주세요 반했습니다",
+        "ground_truth": {
+          "h": 50,
+          "s": 95,
+          "b": 98,
+          "dimmer": 95,
+          "ct": 220
+        },
+        "prediction": {
+          "h": 220,
+          "s": 30,
+          "b": 60,
+          "dimmer": 50,
+          "ct": 350
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 220, \"s\": 30, \"b\": 60, \"dimmer\": 50, \"ct\": 350}",
+        "errors": {
+          "h_circular": 170,
+          "s": 65,
+          "b": 38,
+          "dimmer": 45,
+          "ct": 130,
+          "total_error_score": 448
+        }
+      },
+      {
+        "input": "ㅋㅋㅌㅌㅋㅌㅌㅋㅋㅌㅋㅋㅋ",
+        "ground_truth": {
+          "h": 70,
+          "s": 90,
+          "b": 95,
+          "dimmer": 90,
+          "ct": 200
+        },
+        "prediction": {
+          "h": 280,
+          "s": 70,
+          "b": 50,
+          "dimmer": 40,
+          "ct": 380
+        },
+        "parsed_ok": true,
+        "raw_model_output": "{\"h\": 280, \"s\": 70, \"b\": 50, \"dimmer\": 40, \"ct\": 380}",
+        "errors": {
+          "h_circular": 150,
+          "s": 20,
+          "b": 45,
+          "dimmer": 50,
+          "ct": 180,
+          "total_error_score": 445
+        }
+      }
+    ]
+  },
+  "gap_analysis": {
+    "train_vs_val": {
+      "joint_pm20_gap_pctp": 0.35,
+      "joint_pm30_gap_pctp": 1.6389,
+      "parse_success_gap_pctp": -0.0028,
+      "macro_mae_gap": 0.7558
+    },
+    "val_vs_test": {
+      "joint_pm20_gap_pctp": -0.7,
+      "joint_pm30_gap_pctp": -0.55,
+      "parse_success_gap_pctp": 0.0,
+      "macro_mae_gap": 0.0446
+    },
+    "train_vs_test": {
+      "joint_pm20_gap_pctp": -0.35,
+      "joint_pm30_gap_pctp": 1.0889,
+      "parse_success_gap_pctp": -0.0028,
+      "macro_mae_gap": 0.8004
+    },
+    "generalization_hint": "val과 test가 유사하여 일반화는 비교적 안정적으로 보입니다."
+  }
+}
